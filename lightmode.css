@@ -1,0 +1,24 @@
+:root{
+    --background-color-default: #f0f0f0;
+    --background-color-reverse: #0f0f0f;
+
+    --foreground-color-default: #d9d9d9;
+    --background-color-reverse: #262626;
+
+    --foreground-color-grade00: #d4d4d4;
+    --foreground-color-grade10: #d0d0d0;
+    --foreground-color-grade20: #c6c6c6;
+    --foreground-color-grade30: #c0c0c0;
+    --foreground-color-grade40: #b7b7b7;
+    --foreground-color-grade50: #afafaf;
+    --foreground-color-grade60: #a4a4a4;
+    --foreground-color-grade70: #9c9c9c;
+    --foreground-color-grade80: #909090;
+    --foreground-color-grade90: #808080;
+
+    --background-color-alerting: #ffd9d9;
+
+    --text-color-default: #000000;
+
+    --font-default: "Varela Round", sans-serif;
+}
