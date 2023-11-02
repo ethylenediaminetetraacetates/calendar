@@ -7,6 +7,32 @@ body{
     transition-duration: 100ms;
 }
 
+@media screen and (min-aspect-ratio:3/1){
+    :root{
+        --grid-edge: 30vw;
+    }
+}
+@media screen and (min-aspect-ratio:5/3) and (max-aspect-ratio:3/1){
+    :root{
+        --grid-edge: 20vw;
+    }
+}
+@media screen and (min-aspect-ratio:4/3) and (max-aspect-ratio:5/3){
+    :root{
+        --grid-edge: 10vw;
+    }
+}
+@media screen and (min-aspect-ratio:1/1) and (max-aspect-ratio:4/3){
+    :root{
+        --grid-edge: 5vw;
+    }
+}
+@media screen and (max-aspect-ratio:1/1){
+    :root{
+        --grid-edge: 0vw;
+    }
+}
+
 @keyframes pop{
     0%{
         color: var(--background-color-default);
@@ -115,14 +141,22 @@ h1{
     transition-duration: 100ms;
 }
 
-.flexbox {
-    display: flex;
-    height: 100vmin;
+.calendargrid {
+    display: grid;
+
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(5,1fr);
+
+    height: 70vmin;
     background-color: var(--foreground-color-default);
 
     overflow-y: show;
 
     margin-top: 10vmin;
+    padding: 2vmin;
+
+    margin-left: var(--grid-edge);
+    margin-right: var(--grid-edge);
     
     border-radius: 2vmin;
     flex-wrap: wrap;
@@ -137,31 +171,19 @@ h1{
     transition-duration: 100ms;
 }
 
-.flexbox-element{
-    height: 40vmin;
+.calendargrid-element{
     background-color: var(--background-color-default);
 
     text-align: center;
+    float:left;
 
-    color: transparent;
+    color: var(--text-color-default);
 
-    margin: 5vmin;
-    width: 40vw;
+    margin: 1vmin;
+    border-radius: 2vmin;
 
     font-size: max(3vmin,10pt);
     font-family: var(--font-default);
-    
-    border-radius: 2vmin;
-    flex-wrap: wrap;
-
-    animation-delay: 0ms;
-    animation-play-state: running;
-    animation-name: null;
-    animation-duration: 1000ms;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-
-    transition-duration: 100ms;
 }
 
 .flexbox-text{
@@ -237,7 +259,7 @@ h1{
 }
 
 ::-webkit-scrollbar{
-    width: 0vmin;
+    width: 1.5vmin;
     height: 0vmin;
 }
 ::-webkit-scrollbar-track{
