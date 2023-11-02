@@ -4,12 +4,12 @@ body{
     background-color: var(--background-color-default);
     margin: 0%;
     overflow-x: hidden;
-    transition-duration: 100ms;
+    transition-duration: 500ms;
 }
 
 @media screen and (min-aspect-ratio:3/1){
     :root{
-        --grid-edge: 30vw;
+        --grid-edge: 35vw;
     }
 }
 @media screen and (min-aspect-ratio:5/3) and (max-aspect-ratio:3/1){
@@ -120,7 +120,7 @@ body{
 
 h1{
     color: var(--text-color-default);
-    transition-duration: 100ms;
+    transition-duration: 500ms;
 }
 
 .big{
@@ -138,7 +138,7 @@ h1{
     font-size: max(5vmin,12pt);
     font-family: var(--font-default);
     
-    transition-duration: 100ms;
+    transition-duration: 500ms;
 }
 
 .calendargrid {
@@ -168,10 +168,15 @@ h1{
     animation-iteration-count: 1;
     animation-direction: normal;
 
-    transition-duration: 100ms;
+    transition-duration: 500ms;
 }
 
 .calendargrid-element{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background-color: var(--background-color-default);
 
     text-align: center;
@@ -203,7 +208,7 @@ h1{
     animation-iteration-count: 1;
     animation-direction: normal;
 
-    transition-duration: 100ms;
+    transition-duration: 500ms;
 }
 
 .button:not(:hover){
@@ -232,7 +237,7 @@ h1{
     animation-iteration-count: 1;
     animation-direction: normal;
 
-    transition-duration: 100ms;
+    transition-duration: 500ms;
 }
 
 .button:hover{
@@ -255,7 +260,7 @@ h1{
 
     font-family: var(--font-default);
 
-    transition-duration: 100ms;
+    transition-duration: 500ms;
 }
 
 ::-webkit-scrollbar{
