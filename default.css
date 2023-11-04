@@ -40,7 +40,7 @@ body{
         font-size: 2vmin;
         font-family: var(--font-default);
 
-        margin-top: 0vmin;
+        padding-top: 0vmin;
     }
     100%{
         color: var(--text-color-default);
@@ -48,7 +48,7 @@ body{
         font-size: max(5vmin,12pt);
         font-family: var(--font-default);
 
-        margin-top: min(5vmin,5vh);
+        padding-top: min(5vmin,5vh);
     }
 }
 
@@ -131,7 +131,9 @@ h1{
     animation-iteration-count: 1,infinite;
     animation-direction: normal,alternate;
 
-    margin-top: min(5vmin,5vh);
+    padding-top: min(5vmin,5vh);
+
+    margin: 0;
 
     color: var(--text-color-default);
     text-align: center;
@@ -141,8 +143,13 @@ h1{
     transition-duration: 500ms;
 }
 
-.titlecontainer {
-    height: max(10vh,10vmin);
+.titlegrid {
+    height: max(15vh,15vmin);
+    display: grid;
+
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: repeat(1,1fr);
+
 }
 
 .calendarmonthgrid {
@@ -386,6 +393,14 @@ h1{
 
     transition-duration: 500ms;
 }
+
+svg{
+    background-color: transparent;
+}
+
+
+
+
 
 ::-webkit-scrollbar{
     width: 1.5vmin;
