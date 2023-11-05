@@ -1,4 +1,4 @@
-:root{
+:root, ::backdrop{
     --background-color-default: #242424;
     --background-color-reverse: #dbdbdb;
 

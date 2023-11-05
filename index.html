@@ -13,9 +13,9 @@
     <body>
         <div class = "titlegrid">
             <div class = "hamburgermenu">
-                <svg width = "20vw" height = "max(15vh,15vmin)">
+                <svg width = "20vw" height = "max(15vh,15vmin)" id = "menu" onclick = "openmenu();">
                     <rect 
-                        width="7vw" 
+                        width="max(7.5vh,7.5vmin)" 
                         height="max(1vh,1vmin)" 
                         x="3vw"
                         y="max(5vh,5vmin)"
@@ -25,9 +25,10 @@
                             rx:0.5vmin;
                             ry:0.5vmin;
                         "
+                        class = "hamburgermenu-rects"
                     />
                     <rect 
-                        width="7vw" 
+                        width="max(7.5vh,7.5vmin)" 
                         height="max(1vh,1vmin)" 
                         x="3vw"
                         y="max(7.5vh,7.5vmin)"
@@ -37,9 +38,10 @@
                             rx:0.5vmin;
                             ry:0.5vmin;
                         "
+                        class = "hamburgermenu-rects"
                     />
                     <rect 
-                        width="7vw" 
+                        width="max(7.5vh,7.5vmin)" 
                         height="max(1vh,1vmin)" 
                         x="3vw"
                         y="max(10vh,10vmin)"
@@ -49,6 +51,7 @@
                             rx:0.5vmin;
                             ry:0.5vmin;
                         "
+                        class = "hamburgermenu-rects"
                     />
                 </svg>
             </div>
@@ -119,8 +122,10 @@
             </div>
         </div>
 
-        <h1 class = "big"><a href = "https://github.com/ethylenediaminetetraacetates/calendar">view source on github</a></h1>
-        <h1 class = "big"><a onclick = "togglemode()">change to light mode</a></h1>
+        <dialog class = "dialog-closed">
+            <h2 class = "med"><a onclick = "togglemode()">toggle mode</a></h2>
+            <h2 class = "med"><a href = "https://github.com/ethylenediaminetetraacetates/calendar">view source on github</a></h2>
+        </dialog>
 
         <script type="text/javascript" src="index.js"></script>
     </body>

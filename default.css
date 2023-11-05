@@ -143,6 +143,26 @@ h1{
     transition-duration: 500ms;
 }
 
+.med{
+    animation-delay: 250ms;
+    animation-play-state: running;
+    animation-name: minirotation;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    padding-top: min(4vmin,4vh);
+
+    margin: 0;
+
+    color: var(--text-color-default);
+    text-align: center;
+    font-size: max(4vmin,12pt);
+    font-family: var(--font-default);
+    
+    transition-duration: 500ms;
+}
+
 .titlegrid {
     height: max(15vh,15vmin);
     display: grid;
@@ -398,7 +418,19 @@ svg{
     background-color: transparent;
 }
 
+dialog{
+    background-color: var(--midground-color-default);
+}
 
+dialog::backdrop{
+    transition-duration: 500ms;
+}
+
+dialog::backdrop{
+    background-color: var(--foreground-color-grade80);
+    opacity:0.75;
+    transition-duration: 500ms;
+}
 
 
 
