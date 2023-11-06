@@ -123,36 +123,7 @@
         </div>
 
         <dialog class = "dialog-closed">
-            <svg width = "20vw" height = "max(15vh,15vmin)" id = "closemenu" onclick = "closemenu();">
-                    <rect 
-                        width="max(2vh,2vmin)" 
-                        height="max(10vh,10vmin)" 
-                        x="3vw"
-                        y="max(10vh,10vmin)"
-                        style="
-                            fill:var(--foreground-color-grade60);
-                            stroke-width:2; 
-                            rx:0.5vmin;
-                            ry:0.5vmin;
-                        "
-                        transform="matrix(0.707107, -0.707107, 0.707107, 0.707107, 0, 0)"
-                        class = "hamburgermenu-rects"
-                    />
-                    <rect 
-                        width="max(2vh,2vmin)" 
-                        height="max(10vh,10vmin)" 
-                        x="3vw"
-                        y="max(10vh,10vmin)"
-                        style="
-                            fill:var(--foreground-color-grade60);
-                            stroke-width:2; 
-                            rx:0.5vmin;
-                            ry:0.5vmin;
-                        "
-                        transform="matrix(0.707107, 0.707107, -0.707107, 0.707107, 0, 0)"
-                        class = "hamburgermenu-rects"
-                    />
-            </svg>
+            <h2 class = "med" id = "closemenu" onclick = "closemenu();">[X]</h2>
             <h2 class = "med"><a onclick = "togglemode()">toggle mode</a></h2>
             <h2 class = "med"><a href = "https://github.com/ethylenediaminetetraacetates/calendar">view source on github</a></h2>
         </dialog>
