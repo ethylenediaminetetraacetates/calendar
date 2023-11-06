@@ -137,7 +137,7 @@ h1{
 
     color: var(--text-color-default);
     text-align: center;
-    font-size: max(5vmin,12pt);
+    font-size: 5vmin;
     font-family: var(--font-default);
     
     transition-duration: 500ms;
@@ -157,14 +157,14 @@ h1{
 
     color: var(--text-color-default);
     text-align: center;
-    font-size: max(4vmin,12pt);
+    font-size: 4vmin;
     font-family: var(--font-default);
     
     transition-duration: 500ms;
 }
 
 .titlegrid {
-    height: max(15vh,15vmin);
+    height: min(15vh,15vmin);
     display: grid;
 
     grid-template-columns: 1fr 3fr 1fr;
@@ -178,7 +178,7 @@ h1{
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: repeat(1,1fr);
 
-    height: max(10vh,10vmin);
+    height: min(10vh,10vmin);
     background-color: var(--foreground-color-default);
 
     overflow-y: show;
@@ -228,7 +228,7 @@ h1{
     grid-template-columns: repeat(7,1fr);
     grid-template-rows: repeat(1,1fr);
 
-    height: max(5vh,5vmin);
+    height: min(5vh,5vmin);
     background-color: var(--midground-color-default);
 
     overflow-y: show;
@@ -278,7 +278,7 @@ h1{
     grid-template-columns: repeat(7,1fr);
     grid-template-rows: repeat(6,1fr);
 
-    height: max(60vh,60vmin);
+    height: min(60vh,60vmin);
     background-color: var(--foreground-color-default);
 
     overflow-y: show;
