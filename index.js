@@ -11,3 +11,9 @@ function openmenu(){
     document.querySelector("body > dialog").classList.remove("dialog-closed")
     document.querySelector("body > dialog").classList.add("dialog-open")
 }
+
+function closemenu(){
+    document.querySelector("body > dialog").close()
+    document.querySelector("body > dialog").classList.remove("dialog-open")
+    document.querySelector("body > dialog").classList.add("dialog-closed")
+}
