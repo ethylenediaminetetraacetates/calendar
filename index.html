@@ -125,7 +125,7 @@
         <dialog class = "dialog-closed">
             <svg width = "20vw" height = "max(15vh,15vmin)" id = "closemenu" onclick = "closemenu();">
                     <rect 
-                        width="max(7.5vh,7.5vmin)" 
+                        width="max(2vh,2vmin)" 
                         height="max(10vh,10vmin)" 
                         x="3vw"
                         y="max(10vh,10vmin)"
@@ -135,11 +135,11 @@
                             rx:0.5vmin;
                             ry:0.5vmin;
                         "
-                        transform = "rotate(45,max(10vh,10vmin),max(10vh,10vmin))"
+                        transform="matrix(0.707107, -0.707107, 0.707107, 0.707107, 0, 0)"
                         class = "hamburgermenu-rects"
                     />
                     <rect 
-                        width="max(7.5vh,7.5vmin)" 
+                        width="max(2vh,2vmin)" 
                         height="max(10vh,10vmin)" 
                         x="3vw"
                         y="max(10vh,10vmin)"
@@ -149,7 +149,7 @@
                             rx:0.5vmin;
                             ry:0.5vmin;
                         "
-                        transform = "rotate(-45,max(10vh,10vmin),max(10vh,10vmin))"
+                        transform="matrix(0.707107, 0.707107, -0.707107, 0.707107, 0, 0)"
                         class = "hamburgermenu-rects"
                     />
             </svg>
