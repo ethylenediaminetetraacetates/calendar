@@ -156,6 +156,19 @@ h1{
     transition-duration: 500ms;
 }
 
+.low{
+    padding-top: min(4vmin,4vh);
+
+    margin: 0;
+
+    color: var(--text-color-default);
+    text-align: center;
+    font-size: 3vmin;
+    font-family: var(--font-default);
+    
+    transition-duration: 500ms;
+}
+
 .titlegrid {
     height: min(15vh,15vmin);
     display: grid;
@@ -355,7 +368,7 @@ h1{
     transition-duration: 500ms;
 }
 
-.button:not(:hover){
+button:not(:hover){
     text-align: left;
     background-color: var(--foreground-color-grade10);
     color: var(--text-color-default);
@@ -368,23 +381,14 @@ h1{
 
     border-radius:2vmin;
 
-    font-size:max(3vmin,10pt);
-
-
+    font-size:3vmin;
 
     font-family: var(--font-default);
-
-    animation-delay: 0ms;
-    animation-play-state: running;
-    animation-name: buttonshow;
-    animation-duration: 2000ms;
-    animation-iteration-count: 1;
-    animation-direction: normal;
 
     transition-duration: 500ms;
 }
 
-.button:hover{
+button:hover{
     cursor: pointer;
 
     background-color: var(--foreground-color-grade20);
@@ -400,7 +404,7 @@ h1{
 
     border-radius:2vmin;
 
-    font-size:max(2.1vmin,10.5pt);
+    font-size:3vmin;
 
     font-family: var(--font-default);
 
@@ -441,6 +445,8 @@ dialog{
     animation-direction: normal;
     
     transition-duration: 500ms;
+
+    text-align: center;
 }
 
 @keyframes dialog-fadebg{
@@ -470,6 +476,7 @@ dialog::backdrop{
 .dialog-top{
     background-color: var(--foreground-color-default);
     border-radius: 2vmin;
+    height: 10vh;
 }
 
 

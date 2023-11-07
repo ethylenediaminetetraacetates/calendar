@@ -1,9 +1,13 @@
+let themearr = ["charcoal.css", "midnight.css", "marble.css", "calcite.css", "tomato.css"];
+let themeind = 0;
+
 function togglemode(){
-    if(document.querySelector("head > link:nth-child(1)").href.split("/")[document.querySelector("head > link:nth-child(1)").href.split("/").length - 1] == "darkmode.css"){
-        document.querySelector("head > link:nth-child(1)").href = "lightmode.css";
-    }else{
-        document.querySelector("head > link:nth-child(1)").href = "darkmode.css";
-    }
+    themeind++;
+    themeind = themeind % themearr.length;
+
+    document.getElementById("themeindicator").innerHTML = "current theme: "+themearr[themeind].split(".css")[0]
+
+    document.querySelector("head > link:nth-child(1)").href = "themes/"+themearr[themeind];
 }
 
 function openmenu(){

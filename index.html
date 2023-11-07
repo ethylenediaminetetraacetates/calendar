@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" type="text/css" href="darkmode.css" />
+        <link rel="stylesheet" type="text/css" href="themes/charcoal.css" />
         <link rel="stylesheet" type="text/css" href="default.css" />
 
         <title>calendar</title>
@@ -124,9 +124,12 @@
 
         <dialog class = "dialog-closed">
             <div class = "dialog-top">
-                <h2 class = "med" id = "closemenu" onclick = "closemenu();">close this menu</h2>
+                <button class = "button" id = "closemenu" onclick = "closemenu();">close this menu</button>
             </div>
-            <h2 class = "med"><a onclick = "togglemode()">toggle mode</a></h2>
+            <h2 class = "med">themes</h2>
+            <h3 class = "low" id = "themeindicator">current theme: charcoal</h3>
+            <button class = "button" onclick = "togglemode()">toggle mode</button>
+            <h2 class = "med">other</h2>
             <h2 class = "med"><a href = "https://github.com/ethylenediaminetetraacetates/calendar">view source on github</a></h2>
         </dialog>
 
