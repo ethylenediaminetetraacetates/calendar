@@ -479,6 +479,11 @@ dialog::backdrop{
     height: 10vh;
 }
 
+::selection{
+    background-color: var(--selection-color);
+    color: var(--foreground-color-reverse);
+    opacity: 0.5;
+}
 
 ::-webkit-scrollbar{
     width: 1.5vmin;

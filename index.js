@@ -1,4 +1,4 @@
-let themearr = ["charcoal.css", "midnight.css", "marble.css", "calcite.css", "tomato.css"];
+let themearr = ["charcoal.css", "midnight.css", "embers.css", "marble.css", "calcite.css", "tomato.css", "pumpkin.css", "highlighter.css"];
 let themeind = 0;
 
 function togglemode(){

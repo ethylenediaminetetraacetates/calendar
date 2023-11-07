@@ -1,0 +1,28 @@
+:root, ::backdrop{
+    --background-color-default: #ffaf7a;
+    --background-color-reverse: #005085;
+
+    --midground-color-default: #fcac77;
+
+    --foreground-color-default: #f5a570;
+    --background-color-reverse: #0a5a8f;
+
+    --foreground-color-grade00: #f5a570;
+    --foreground-color-grade10: #f2a26c;
+    --foreground-color-grade20: #ec9c6a;
+    --foreground-color-grade30: #e79665;
+    --foreground-color-grade40: #e2905f;
+    --foreground-color-grade50: #da8859;
+    --foreground-color-grade60: #d68256;
+    --foreground-color-grade70: #d38052;
+    --foreground-color-grade80: #d07c4c;
+    --foreground-color-grade90: #c06c3c;
+
+    --background-color-alerting: #c93000;
+
+    --text-color-default: #000000;
+
+    --selection-color: #cc8800;
+
+    --font-default: "Varela Round", sans-serif;
+}

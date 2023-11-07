@@ -22,5 +22,7 @@
 
     --text-color-default: #000000;
 
+    --selection-color: #0000ff;
+
     --font-default: "Varela Round", sans-serif;
 }
