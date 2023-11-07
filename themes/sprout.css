@@ -14,15 +14,15 @@
     --foreground-color-grade40: #7ada7a;
     --foreground-color-grade50: #70d070;
     --foreground-color-grade60: #6ccc6c;
-    --foreground-color-grade70: #c45c5c;
-    --foreground-color-grade80: #c05959;
-    --foreground-color-grade90: #b05050;
+    --foreground-color-grade70: #69c969;
+    --foreground-color-grade80: #62c262;
+    --foreground-color-grade90: #52c252;
 
-    --background-color-alerting: #ff0000;
+    --background-color-alerting: #cc0000;
 
     --text-color-default: #000000;
 
-    --selection-color: #cc0000;
+    --selection-color: #00cc00;
 
     --font-default: "Varela Round", sans-serif;
 }

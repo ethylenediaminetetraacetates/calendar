@@ -169,6 +169,14 @@ h1{
     transition-duration: 500ms;
 }
 
+span.low{
+    font-weight:bold;
+}
+
+.smallspandisplay{
+    width: 20vw;
+}
+
 .titlegrid {
     height: min(15vh,15vmin);
     display: grid;
@@ -483,6 +491,18 @@ dialog::backdrop{
     background-color: var(--selection-color);
     color: var(--foreground-color-reverse);
     opacity: 0.5;
+}
+
+a:link,a:active{
+    color: var(--selection-color);
+}
+
+a:hover:not(a:active){
+    color: var(--foreground-color-grade70);
+}
+
+a:visited:not(a:active,a:hover){
+    color: var(--foreground-color-grade90);
 }
 
 ::-webkit-scrollbar{
