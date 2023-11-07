@@ -144,13 +144,6 @@ h1{
 }
 
 .med{
-    animation-delay: 250ms;
-    animation-play-state: running;
-    animation-name: minirotation;
-    animation-duration: 1000ms;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-
     padding-top: min(4vmin,4vh);
 
     margin: 0;
@@ -418,20 +411,66 @@ svg{
     background-color: transparent;
 }
 
+@keyframes dialog-popup{
+    0%{
+        height: 0vh;
+        width: 0vw;
+        transform: rotate(360deg);
+    }
+    100%{
+        height: 80vh;
+        width: 80vw;
+        transform: rotate(0deg);
+    }
+}
+
 dialog{
     background-color: var(--midground-color-default);
-}
+    border-radius: 2vmin;
+    border-style: solid;
+    border-color: var(--foreground-color-grade30);
 
-dialog::backdrop{
+    height: 80vh;
+    width: 80vw;
+
+    animation-delay: 0ms;
+    animation-play-state: running;
+    animation-name: dialog-popup;
+    animation-duration: 200ms;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    
     transition-duration: 500ms;
 }
 
-dialog::backdrop{
-    background-color: var(--foreground-color-grade80);
-    opacity:0.75;
-    transition-duration: 500ms;
+@keyframes dialog-fadebg{
+    0%{
+        background-color: transparent;
+    }
+    100%{
+        background-color: var(--midground-color-default);
+    }
 }
 
+dialog::backdrop{
+    background-color: var(--background-color-default);
+    opacity:0.8;
+    transition-duration: 500ms;
+
+    border-radius: 2vmin;
+
+    animation-delay: 0ms;
+    animation-play-state: running;
+    animation-name: dialog-fadebg;
+    animation-duration: 200ms;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+.dialog-top{
+    background-color: var(--foreground-color-default);
+    border-radius: 2vmin;
+}
 
 
 ::-webkit-scrollbar{
