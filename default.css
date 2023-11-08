@@ -177,6 +177,11 @@ span.low{
     padding-top: 0;
 }
 
+.yearspan{
+    color: var(--foreground-color-grade90);
+}
+
+
 .titlegrid {
     height: min(15vh,15vmin);
     display: grid;
@@ -219,6 +224,30 @@ span.low{
 .calendarmonthgrid-element{
 
     display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--background-color-default);
+
+    text-align: center;
+    float:left;
+
+    color: var(--text-color-default);
+
+    margin: 1vmin;
+    border-radius: 2vmin;
+
+    font-size: 3vmin;
+    font-family: var(--font-default);
+}
+
+.calendarmonthgrid-monthdisplay{
+
+    display: grid;
+
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 1fr;
+
     justify-content: center;
     align-items: center;
 
