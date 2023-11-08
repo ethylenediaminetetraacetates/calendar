@@ -460,7 +460,7 @@ svg{
     0%{
         height: 0vh;
         width: 0vw;
-        transform: rotate(360deg);
+        transform: rotate(0deg);
     }
     100%{
         height: 80vh;
