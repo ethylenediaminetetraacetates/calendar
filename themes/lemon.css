@@ -1,28 +1,28 @@
 :root, ::backdrop{
-    --background-color-default: #d9e97a;
+    --background-color-default: #e6e63c;
     --background-color-reverse: #161685;
 
-    --midground-color-default: #d4e478;
+    --midground-color-default: #d9d92f;
 
-    --foreground-color-default: #d0e072;
-    --background-color-reverse: #1f1f8d;
+    --foreground-color-default: #d0d020;
+    --foreground-color-reverse: #1f1f8d;
 
-    --foreground-color-grade00: #d0e062;
-    --foreground-color-grade10: #ccdc5f;
-    --foreground-color-grade20: #c8d859;
-    --foreground-color-grade30: #c3d353;
-    --foreground-color-grade40: #b9c950;
-    --foreground-color-grade50: #b5c54b;
-    --foreground-color-grade60: #b0c049;
-    --foreground-color-grade70: #acbc42;
-    --foreground-color-grade80: #a8b83c;
-    --foreground-color-grade90: #98a82c;
+    --foreground-color-grade00: #d0d020;
+    --foreground-color-grade10: #cccc1c;
+    --foreground-color-grade20: #c8c818;
+    --foreground-color-grade30: #c4c414;
+    --foreground-color-grade40: #c1c114;
+    --foreground-color-grade50: #bbbb0b;
+    --foreground-color-grade60: #b9b909;
+    --foreground-color-grade70: #b5b505;
+    --foreground-color-grade80: #b0b000;
+    --foreground-color-grade90: #a0a000;
 
-    --background-color-alerting: #ff9999;
+    --background-color-alerting: #e63c3c;
 
     --text-color-default: #000000;
 
-    --selection-color: #cccc00;
+    --selection-color: #ffff00;
 
     --font-default: "Varela Round", sans-serif;
 }

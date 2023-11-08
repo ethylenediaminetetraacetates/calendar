@@ -174,7 +174,7 @@ span.low{
 }
 
 .smallspandisplay{
-    width: 20vw;
+    padding-top: 0;
 }
 
 .titlegrid {
@@ -377,7 +377,7 @@ span.low{
 }
 
 button:not(:hover){
-    text-align: left;
+    text-align: center;
     background-color: var(--foreground-color-grade10);
     color: var(--text-color-default);
     margin-top: 0vmin;
@@ -401,7 +401,7 @@ button:hover{
 
     background-color: var(--foreground-color-grade20);
 
-    text-align: left;
+    text-align: center;
     color: var(--text-color-default);
     margin-top: 0vmin;
     animation-timing-function: ease-in-out;
@@ -417,6 +417,10 @@ button:hover{
     font-family: var(--font-default);
 
     transition-duration: 500ms;
+}
+
+.autofit{
+    height: min-content;
 }
 
 svg{
@@ -484,7 +488,52 @@ dialog::backdrop{
 .dialog-top{
     background-color: var(--foreground-color-default);
     border-radius: 2vmin;
-    height: 10vh;
+    height: 6vmin;
+}
+
+.paintchipgrid{
+    display: grid;
+
+    grid-template-columns: repeat(17,1fr);
+    grid-template-rows: repeat(1,1fr);
+
+    height: 5vmin;
+
+    border-color: var(--text-color-default);
+    border-width: 0.1vmin;
+    border-style: solid;
+
+    border-radius: 0;
+
+    margin-left: var(--grid-edge);
+    margin-right: var(--grid-edge);
+
+    transition-duration: 500ms;
+}
+
+.paintchip{
+    border-radius: 0;
+
+    transition-duration: 500ms;
+}
+
+.themepickergrid{
+    display: grid;
+
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: repeat(1,1fr);
+
+    width:40vw;
+    height:10vmin;
+
+    border-radius: 0;
+
+    text-align: center;
+
+    margin-left: 20vw;
+    margin-right: 20vw;
+
+    transition-duration: 500ms;
 }
 
 ::selection{
