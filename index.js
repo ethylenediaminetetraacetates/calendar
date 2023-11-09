@@ -68,13 +68,13 @@ function modedown(){
 }
 
 function openmenu(){
-    document.querySelector("body > dialog").showModal()
-    document.querySelector("body > dialog").classList.remove("dialog-closed")
-    document.querySelector("body > dialog").classList.add("dialog-open")
+    document.getElementById("menu").showModal()
+    document.getElementById("menu").classList.remove("dialog-closed")
+    document.getElementById("menu").classList.add("dialog-open")
 }
 
 function closemenu(){
-    document.querySelector("body > dialog").close()
-    document.querySelector("body > dialog").classList.remove("dialog-open")
-    document.querySelector("body > dialog").classList.add("dialog-closed")
+    document.getElementById("menu").close()
+    document.getElementById("menu").classList.remove("dialog-open")
+    document.getElementById("menu").classList.add("dialog-closed")
 }
