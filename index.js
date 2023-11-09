@@ -11,7 +11,7 @@ let dayabbrs = [
 ]
 
 let settings = {
-    dayabbr:1
+    dayabbr:0
 }
 
 function updsettings(){
