@@ -1,8 +1,8 @@
 :root, ::backdrop{
-    --background-color-default: #f0f0f0;
-    --background-color-reverse: #0f0f0f;
+    --background-color-default: #ffffff;
+    --background-color-reverse: #000000;
 
-    --midground-color-default: #e0e0e0;
+    --midground-color-default: #f9f9f9;
 
     --foreground-color-default: #d9d9d9;
     --foreground-color-reverse: #262626;
@@ -23,6 +23,4 @@
     --text-color-default: #000000;
 
     --selection-color: #0000ff;
-
-    --font-default: "Varela Round", sans-serif;
 }

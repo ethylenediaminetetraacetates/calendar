@@ -1,6 +1,8 @@
 let themearr = ["charcoal.css", "midnight.css", "embers.css", "marble.css", "calcite.css", "tomato.css", "pumpkin.css", "canary.css", "lemon.css", "highlighter.css", "sprout.css", "forest.css"];
 let themeind = 0;
 
+let fontarr = ["rounded.css","sans-serif I.css","sans-serif II.css","sans-serif III.css","serif.css", "monospace.css", "playful.css"]
+let fontind = 0;
 
 
 let dayabbrs = [
@@ -49,13 +51,31 @@ function dadown(){
     updsettings();
 }
 
+function fontup(){
+    fontind = fontind + 1;
+    fontind = fontind % fontarr.length;
+
+    document.getElementById("fontindicator").innerHTML = fontarr[fontind].split(".css")[0];
+
+    document.getElementById("fontcss").href = "themes/fonts/"+fontarr[fontind];
+}
+function fontdown(){
+    fontind = fontind - 1;
+    if(fontind < 0){fontind = fontarr.length - 1}
+    fontind = fontind % fontarr.length;
+
+    document.getElementById("fontindicator").innerHTML = fontarr[fontind].split(".css")[0];
+
+    document.getElementById("fontcss").href = "themes/fonts/"+fontarr[fontind];
+}
+
 function modeup(){
     themeind = themeind + 1;
     themeind = themeind % themearr.length;
 
     document.getElementById("themeindicator").innerHTML = themearr[themeind].split(".css")[0];
 
-    document.querySelector("head > link:nth-child(1)").href = "themes/"+themearr[themeind];
+    document.getElementById("palettecss").href = "themes/palettes/"+themearr[themeind];
 }
 function modedown(){
     themeind = themeind - 1;
@@ -64,7 +84,7 @@ function modedown(){
 
     document.getElementById("themeindicator").innerHTML = themearr[themeind].split(".css")[0];
 
-    document.querySelector("head > link:nth-child(1)").href = "themes/"+themearr[themeind];
+    document.getElementById("palettecss").href = "themes/palettes/"+themearr[themeind];
 }
 
 function openmenu(){

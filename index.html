@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" type="text/css" href="themes/charcoal.css" />
+        <link rel="stylesheet" id = "palettecss" type="text/css" href="themes/palettes/charcoal.css" />
+        <link rel="stylesheet" id = "fontcss" type="text/css" href="themes/fonts/rounded.css" />
         <link rel="stylesheet" type="text/css" href="default.css" />
 
         <title>calendar</title>
@@ -135,17 +136,21 @@
                 <button class = "button" id = "closemenu" onclick = "closemenu();">close this menu</button>
             </div>
 
-            <h2 class = "med">display</h2>
+            <h2 class = "medbig">display</h2>
 
-            <div class = "themepickergrid">
+            <h3 class = "med">day name abbreviation</h3>
+
+            <div class = "previousnextmenugrid">
                 <button class = "autofit button" onclick = "dadown()">&lt;</button>
                 <span class = "low smallspandisplay" id = "dayabbrindicator">M, T, W</span>
                 <button class = "autofit button" onclick = "daup()">&gt;</button>
             </div>
 
-            <h2 class = "med">themes</h2>
+            <h2 class = "medbig">themes</h2>
 
-            <div class = "themepickergrid">
+            <h3 class = "med">color palette</h3>
+
+            <div class = "previousnextmenugrid">
                 <button class = "autofit button" onclick = "modedown()">&lt;</button>
                 <span class = "low smallspandisplay" id = "themeindicator">charcoal</span>
                 <button class = "autofit button" onclick = "modeup()">&gt;</button>
@@ -167,14 +172,23 @@
                 <div class = "paintchip" style="background-color: var(--foreground-color-grade70)"></div>
                 <div class = "paintchip" style="background-color: var(--foreground-color-grade80)"></div>
                 <div class = "paintchip" style="background-color: var(--foreground-color-grade90)"></div>
+
                 <div class = "paintchip" style="background-color: var(--background-color-alerting)"></div>
                 <div class = "paintchip" style="background-color: var(--text-color-default)"></div>
                 <div class = "paintchip" style="background-color: var(--selection-color)"></div>
             </div>
 
+            <h3 class = "med">font</h3>
+
+            <div class = "previousnextmenugrid">
+                <button class = "autofit button" onclick = "fontdown()">&lt;</button>
+                <span class = "low smallspandisplay" id = "fontindicator">rounded</span>
+                <button class = "autofit button" onclick = "fontup()">&gt;</button>
+            </div>
+
         </div>
 
-        <h2 class = "med">other</h2>
+        <h2 class = "medbig">other</h2>
         <h2 class = "med"><a href = "https://github.com/ethylenediaminetetraacetates/calendar">view source on github</a></h2>
         </dialog>
 
