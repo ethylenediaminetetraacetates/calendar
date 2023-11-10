@@ -514,6 +514,29 @@ span.low{
     transition-duration: 500ms;
 }
 
+.checkbox{
+    cursor: pointer;
+
+    border-color:transparent;
+    border-style:solid;
+    border-width:1vmin;
+
+    border-radius:2vmin;
+
+    height: 5vmin;
+    width: 5vmin;
+
+    transition-duration: 500ms;
+}
+
+.checkbox.inactive{
+    background-color: var(--foreground-color-grade10);
+}
+
+.checkbox.active{
+    background-color: var(--foreground-color-grade90);
+}
+
 .autofit{
     height: min-content;
 }
