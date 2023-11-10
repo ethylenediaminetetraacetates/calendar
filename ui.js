@@ -14,7 +14,9 @@ let dayabbrs = [
 
 let settings = {
     dayabbr:0,
-    lssave:true
+    lssave:true,
+    font:"rounded.css",
+    palette:"charcoal.css"
 }
 
 function lssavetoggle(){
@@ -25,6 +27,8 @@ function lssavetoggle(){
     settings.lssave ? temp="active" : temp="inactive"
 
     document.getElementById("lssavetoggle").classList.add(temp)
+
+    
 }
 
 function updsettings(){
@@ -108,4 +112,38 @@ function closemenu(){
     document.getElementById("menu").close()
     document.getElementById("menu").classList.remove("dialog-open")
     document.getElementById("menu").classList.add("dialog-closed")
+}
+
+function closewarning(){
+    document.getElementById("warning").close()
+}
+
+function scareshake(ms,amplitude){
+    var temp = []
+    shaker = 1
+
+    a=setInterval(function(){
+        document.body.style.rotate = shaker*(Math.random()*amplitude)+"deg"
+        document.getElementById("menu").style.rotate = shaker*(Math.random()*amplitude)+"deg"
+        shaker = shaker * -1
+    },20)
+    
+    console.log("pushing " + a)
+    temp.push(a)
+
+    setTimeout(function(){
+
+        console.log("clearing " + temp[temp.length-1])
+
+        clearInterval(temp[temp.length-1])
+
+        temp.shift();
+        document.body.style.rotate = "0deg"
+        document.getElementById("menu").style.rotate = "0deg";
+    },ms)
+}
+
+function warnshow(title){
+    document.querySelector("#warning > h2").innerHTML = title
+    document.getElementById("warning").showModal()
 }

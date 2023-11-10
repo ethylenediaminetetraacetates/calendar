@@ -197,18 +197,40 @@
 
         </div>
 
-        <h2 class = "medbig">other</h2>
+        <h2 class = "medbig">dev zone</h2>
 
         <h3 class = "med">autosaving</h3>
 
-        <h3 class = "med">note: this toggle does nothing for now.</h3>
+        <h3 class = "med">checkbox test</h3>
 
         <div class = "checkboxgrid" onclick="lssavetoggle()">
             <button class = "checkbox inactive" id = "lssavetoggle"></button>
             <h2 class = "low smallspandisplay">save to localstorage</h2>
         </div>
 
+        <h3 class = "med">popup system test</h3>
+
+        <button class = "autofit button" onclick = "scareshake(500,1);warnshow('are you sure?');">show with shake</button>
+        <button class = "autofit button" onclick = "warnshow('are you sure?');">show without shake</button>
+
+        <h3 class = "med">shake system test</h3>
+        <button class = "autofit button" onclick = "scareshake(500,0.1);">subtle</button>
+        <button class = "autofit button" onclick = "scareshake(500,0.5);">low</button>
+        <button class = "autofit button" onclick = "scareshake(500,1);">regular</button>
+        <button class = "autofit button" onclick = "scareshake(500,2);">strong</button>
+        <button class = "autofit button" onclick = "scareshake(500,10);">vigorous</button>
+        <button class = "autofit button" onclick = "scareshake(500,20);">in-your-face</button>
+
+        <h2 class = "medbig">other</h2>
+
         <h2 class = "med"><a href = "https://github.com/ethylenediaminetetraacetates/calendar">view source on github</a></h2>
+
+        </dialog>
+
+        <dialog class = "confirmdialog" id = "warning">
+            <h2 class = "medbig">are you sure?</h2>
+            <button class = "button" id = "closemenu" onclick = "closewarning();">Yes</button>
+            <button class = "button" id = "closemenu" onclick = "closewarning();">No</button>
         </dialog>
 
         <script type="text/javascript" src="dates.js"></script>
