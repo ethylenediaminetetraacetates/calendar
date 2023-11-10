@@ -537,7 +537,7 @@ svg{
     }
 }
 
-dialog{
+.dialog{
     background-color: var(--midground-color-default);
     border-radius: 2vmin;
     border-style: solid;
@@ -567,7 +567,7 @@ dialog{
     }
 }
 
-dialog::backdrop{
+.dialog::backdrop{
     background-color: var(--background-color-default);
     opacity:0.8;
     transition-duration: 500ms;
