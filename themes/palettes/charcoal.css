@@ -23,4 +23,7 @@
     --text-color-default: #f0f0f0;
 
     --selection-color: #0000ff;
+
+    --checked-color: #00c000;
+    --denied-color: #c00000;
 }

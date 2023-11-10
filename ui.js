@@ -13,7 +13,18 @@ let dayabbrs = [
 ]
 
 let settings = {
-    dayabbr:0
+    dayabbr:0,
+    lssave:true
+}
+
+function lssavetoggle(){
+    settings.lssave = !settings.lssave;
+    document.getElementById("lssavetoggle").classList.remove("active")
+    document.getElementById("lssavetoggle").classList.remove("inactive")
+
+    settings.lssave ? temp="active" : temp="inactive"
+
+    document.getElementById("lssavetoggle").classList.add(temp)
 }
 
 function updsettings(){

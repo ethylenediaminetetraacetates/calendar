@@ -182,6 +182,9 @@
                 <div class = "paintchip" style="background-color: var(--background-color-alerting)"></div>
                 <div class = "paintchip" style="background-color: var(--text-color-default)"></div>
                 <div class = "paintchip" style="background-color: var(--selection-color)"></div>
+
+                <div class = "paintchip" style="background-color: var(--checked-color)"></div>
+                <div class = "paintchip" style="background-color: var(--denied-color)"></div>
             </div>
 
             <h3 class = "med">font</h3>
@@ -195,7 +198,15 @@
         </div>
 
         <h2 class = "medbig">other</h2>
-        <button class = "checkbox inactive"></button>
+
+        <h3 class = "med">autosaving</h3>
+
+        <h3 class = "med">note: this toggle does nothing for now.</h3>
+
+        <div class = "checkboxgrid" onclick="lssavetoggle()">
+            <button class = "checkbox inactive" id = "lssavetoggle"></button>
+            <h2 class = "low smallspandisplay">save to localstorage</h2>
+        </div>
 
         <h2 class = "med"><a href = "https://github.com/ethylenediaminetetraacetates/calendar">view source on github</a></h2>
         </dialog>

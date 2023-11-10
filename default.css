@@ -534,7 +534,17 @@ span.low{
 }
 
 .checkbox.active{
-    background-color: var(--foreground-color-grade90);
+    background-color: var(--checked-color);
+}
+
+.checkboxgrid{
+    display: grid;
+
+    grid-template-columns: 5vmin 1fr;
+    grid-template-rows: 5vmin;
+
+    margin-left: 20vw;
+    margin-right: 20vw;
 }
 
 .autofit{
@@ -617,7 +627,7 @@ svg{
 .paintchipgrid{
     display: grid;
 
-    grid-template-columns: repeat(17,1fr);
+    grid-template-columns: repeat(19,1fr);
     grid-template-rows: repeat(1,1fr);
 
     height: 5vmin;
@@ -643,7 +653,7 @@ svg{
 .previousnextmenugrid{
     display: grid;
 
-    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-columns: 6vmin 5fr 6vmin;
     grid-template-rows: repeat(1,1fr);
 
     width:40vw;
