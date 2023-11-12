@@ -51,13 +51,17 @@ calendar.genmonths = function(){
         if(calendar.month.firstday > i){
             temp += "<div class = \"calendargrid-inactive-element\"></div>";
         }else if((calendar.month.firstday+calendar.month.days) > i){
-            temp += "<div class = \"calendargrid-element\">"+(1+i-calendar.month.firstday)+"</div>";
+            temp += "<div onclick = \"calendar.dayclick("+(1+i-calendar.month.firstday)+");\" class = \"calendargrid-element\">"+(1+i-calendar.month.firstday)+"</div>";
         }else{
             temp += "<div class = \"calendargrid-inactive-element\"></div>";
         }
     }
 
     document.getElementById("calendargrid").innerHTML = temp;
+}
+
+calendar.dayclick = function(day){
+    dialog("warning-wide",calendar.monthlookup[calendar.selecteddate.getMonth()]+" "+day+", "+calendar.selecteddate.getFullYear());
 }
 
 calendar.refreshall = function(){

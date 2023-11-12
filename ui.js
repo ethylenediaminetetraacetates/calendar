@@ -115,10 +115,6 @@ function closemenu(){
 
 }
 
-function closewarning(){
-    document.getElementById("warning").close()
-}
-
 function scareshake(ms,amplitude){
     var temp = []
     shaker = 1
@@ -144,7 +140,17 @@ function scareshake(ms,amplitude){
     },ms)
 }
 
-function warnshow(title){
-    document.querySelector("#warning > h2").innerHTML = title
-    document.getElementById("warning").showModal()
+function dialog(id,title){
+    document.getElementById(id+"-title").innerHTML = title
+    document.getElementById(id).showModal()
+}
+
+function dialogclose(id){
+    document.getElementById(id).close()
+}
+
+//RELative DiaLoG CLose
+function reldlgcl(e){
+    console.log(e.target);
+    dialogclose(e.target.parentElement.id);
 }

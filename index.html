@@ -203,14 +203,19 @@
         <h3 class = "med">checkbox test</h3>
 
         <div class = "checkboxgrid" onclick="lssavetoggle()">
-            <button class = "checkbox inactive" id = "lssavetoggle"></button>
+            <button class = "checkbox active" id = "lssavetoggle"></button>
             <h2 class = "low smallspandisplay">save to localstorage</h2>
         </div>
 
         <h3 class = "med">popup system test</h3>
 
-        <button class = "autofit button" onclick = "scareshake(500,1);warnshow('are you sure?');">show with shake</button>
-        <button class = "autofit button" onclick = "warnshow('are you sure?');">show without shake</button>
+        <button class = "autofit button" onclick = "scareshake(500,1);dialog('warning','are you sure?');">show with shake</button>
+        <button class = "autofit button" onclick = "dialog('warning','are you sure?');">show without shake</button>
+
+        <h3 class = "med">wide popup system test</h3>
+
+        <button class = "autofit button" onclick = "scareshake(500,1);dialog('warning-wide','are you sure?');">show with shake</button>
+        <button class = "autofit button" onclick = "dialog('warning-wide','are you sure?');">show without shake</button>
 
         <h3 class = "med">shake system test</h3>
         <button class = "autofit button" onclick = "scareshake(500,0.1);">subtle</button>
@@ -228,9 +233,14 @@
 
         <div id = "dialogstack">
             <dialog class = "confirmdialog" id = "warning">
-                <h2 class = "medbig">are you sure?</h2>
-                <button class = "button" id = "closemenu" onclick = "closewarning();">Yes</button>
-                <button class = "button" id = "closemenu" onclick = "closewarning();">No</button>
+                <h2 class = "medbig" id = "warning-title">are you sure?</h2>
+                <button class = "button" id = "closemenu" onclick = "reldlgcl(event);">Yes</button>
+                <button class = "button" id = "closemenu" onclick = "reldlgcl(event);">No</button>
+            </dialog>
+            <dialog class = "confirmdialog wide" id = "warning-wide">
+                <h2 class = "medbig" id = "warning-wide-title">are you sure?</h2>
+                <button class = "button" id = "closemenu" onclick = "reldlgcl(event);">Yes</button>
+                <button class = "button" id = "closemenu" onclick = "reldlgcl(event);">No</button>
             </dialog>
         </div>
 
