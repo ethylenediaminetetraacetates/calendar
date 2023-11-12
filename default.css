@@ -582,10 +582,35 @@ svg{
     animation-iteration-count: 1;
     animation-direction: normal;
     
-    transition: all 500ms ease, transform 0 ease;
+    transition: all 500ms, transform 0;
 
     text-align: center;
 }
+
+.dialog-open{
+    margin-top: 10vh;
+
+    animation-delay: 0ms;
+    animation-play-state: running;
+    animation-name: dialog-popup;
+    animation-duration: 100ms;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+.dialog-closed{
+    margin-top: 100vh;
+
+    animation-delay: 0ms;
+    animation-play-state: running;
+    animation-name: dialog-popup;
+    animation-duration: 100ms;
+    animation-iteration-count: 1;
+    animation-direction: reverse;
+
+    transition: all 100ms;
+}
+
 
 @keyframes dialog-fadebg{
     0%{

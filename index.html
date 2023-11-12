@@ -227,11 +227,13 @@
 
         </dialog>
 
-        <dialog class = "confirmdialog" id = "warning">
-            <h2 class = "medbig">are you sure?</h2>
-            <button class = "button" id = "closemenu" onclick = "closewarning();">Yes</button>
-            <button class = "button" id = "closemenu" onclick = "closewarning();">No</button>
-        </dialog>
+        <div id = "dialogstack">
+            <dialog class = "confirmdialog" id = "warning">
+                <h2 class = "medbig">are you sure?</h2>
+                <button class = "button" id = "closemenu" onclick = "closewarning();">Yes</button>
+                <button class = "button" id = "closemenu" onclick = "closewarning();">No</button>
+            </dialog>
+        </div>
 
         <script type="text/javascript" src="dates.js"></script>
         <script type="text/javascript" src="ui.js"></script>

@@ -103,15 +103,16 @@ function modedown(){
 }
 
 function openmenu(){
+    document.getElementById("menu").classList.replace("dialog-closed", "dialog-open")
     document.getElementById("menu").showModal()
-    document.getElementById("menu").classList.remove("dialog-closed")
-    document.getElementById("menu").classList.add("dialog-open")
 }
 
 function closemenu(){
-    document.getElementById("menu").close()
-    document.getElementById("menu").classList.remove("dialog-open")
-    document.getElementById("menu").classList.add("dialog-closed")
+    document.getElementById("menu").classList.replace("dialog-open", "dialog-closed")
+    setTimeout(function(){
+        document.getElementById("menu").close()
+    },100)
+
 }
 
 function closewarning(){
