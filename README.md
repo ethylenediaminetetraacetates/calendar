@@ -2,7 +2,7 @@
 
 this is a calendar i've been making for a while.
 
-you can visit it [here](c.a-b.zc.al)
+you can visit it [here](https://c.a-b.zc.al)
 
 ### licensing
 right now, it's licensed under CC0.
