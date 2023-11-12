@@ -47,7 +47,9 @@ calendar.monthshiftup = function(){
 calendar.genmonths = function(){
     temp = "";
 
-    temp += 
+    for(let i = 0; i > 42; i++){
+        if(i<7){}
+    }
 
     document.getElementById("calendargrid").innerHTML = 
 }
@@ -55,7 +57,7 @@ calendar.genmonths = function(){
 calendar.refreshall = function(){
     calendar.refreshdaymonths();
     calendar.refreshdisplay();
-    calendar.genmonths();
+    //calendar.genmonths();
 }
 
 calendar.refreshall();
