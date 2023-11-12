@@ -47,17 +47,23 @@ calendar.monthshiftup = function(){
 calendar.genmonths = function(){
     temp = "";
 
-    for(let i = 0; i > 42; i++){
-        if(i<7){}
+    for(let i = 0; i < 42; i++){
+        if(calendar.month.firstday > i){
+            temp += "<div class = \"calendargrid-inactive-element\"></div>";
+        }else if((calendar.month.firstday+calendar.month.days) > i){
+            temp += "<div class = \"calendargrid-element\">"+(1+i-calendar.month.firstday)+"</div>";
+        }else{
+            temp += "<div class = \"calendargrid-inactive-element\"></div>";
+        }
     }
 
-    document.getElementById("calendargrid").innerHTML = 
+    document.getElementById("calendargrid").innerHTML = temp;
 }
 
 calendar.refreshall = function(){
     calendar.refreshdaymonths();
     calendar.refreshdisplay();
-    //calendar.genmonths();
+    calendar.genmonths();
 }
 
 calendar.refreshall();
