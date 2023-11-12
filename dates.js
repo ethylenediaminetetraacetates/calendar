@@ -34,5 +34,28 @@ calendar.refreshdisplay = function(){
     
 }
 
-calendar.refreshdaymonths();
-calendar.refreshdisplay();
+calendar.monthshiftdown = function(){
+    calendar.selecteddate.setMonth(calendar.selecteddate.getMonth() - 1)
+    calendar.refreshall();
+}
+
+calendar.monthshiftup = function(){
+    calendar.selecteddate.setMonth(calendar.selecteddate.getMonth() + 1)
+    calendar.refreshall();
+}
+
+calendar.genmonths = function(){
+    temp = "";
+
+    temp += 
+
+    document.getElementById("calendargrid").innerHTML = 
+}
+
+calendar.refreshall = function(){
+    calendar.refreshdaymonths();
+    calendar.refreshdisplay();
+    calendar.genmonths();
+}
+
+calendar.refreshall();

@@ -66,14 +66,14 @@
         <div class = "fullcalendargrid">
             <div class = "calendarmonthgrid">
 
-                    <button class = "calendarmonthgrid-element">&lt;</button>
+                    <button class = "calendarmonthgrid-element" onclick = "calendar.monthshiftdown();">&lt;</button>
 
                     <div class = "calendarmonthgrid-monthdisplay">
                         <span class = "yearspan" id = "yeardisplay">2023</span>
                         <span id = "monthdisplay">november</span>
                     </div>
 
-                    <button class = "calendarmonthgrid-element">&gt;</button>
+                    <button class = "calendarmonthgrid-element" onclick = "calendar.monthshiftup();">&gt;</button>
 
             </div>
             <div class = "calendardaygrid">
@@ -85,7 +85,7 @@
                 <div class = "calendardaygrid-element">F</div>
                 <div class = "calendardaygrid-element">S</div>
             </div>
-            <div class = "calendargrid">
+            <div class = "calendargrid" id = "calendargrid">
                 <div class = "calendargrid-inactive-element"></div>
                 <div class = "calendargrid-inactive-element"></div>
                 <div class = "calendargrid-inactive-element"></div>
