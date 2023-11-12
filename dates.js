@@ -7,6 +7,10 @@ calendar.month = {};
 calendar.month.days = 0;
 calendar.month.firstday = 0;
 
+calendar.monthlookup = [
+    "january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"
+]
+
 calendar.refreshdaymonths = function(){
 
     let date = calendar.selecteddate;
@@ -22,4 +26,13 @@ calendar.refreshdaymonths = function(){
 
 }
 
+calendar.refreshdisplay = function(){
+
+    let date = calendar.selecteddate;
+    document.getElementById("yeardisplay").innerHTML = date.getFullYear();
+    document.getElementById("monthdisplay").innerHTML = calendar.monthlookup[date.getMonth()];
+    
+}
+
 calendar.refreshdaymonths();
+calendar.refreshdisplay();
