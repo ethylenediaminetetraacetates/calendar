@@ -3,7 +3,8 @@
     <head>
         <link rel="stylesheet" id = "palettecss" type="text/css" href="themes/palettes/charcoal.css" />
         <link rel="stylesheet" id = "fontcss" type="text/css" href="themes/fonts/rounded.css" />
-        <link rel="stylesheet" type="text/css" href="default.css" />
+        <link rel="stylesheet" media = "screen" type="text/css" href="default.css" />
+        <link rel="stylesheet" media = "print" type="text/css" href="printable.css" />
 
         <link rel="icon" type="image/x-icon" href="favicon.ico">
 
@@ -232,16 +233,25 @@
         </dialog>
 
         <div id = "dialogstack">
+
             <dialog class = "confirmdialog" id = "warning">
                 <h2 class = "medbig" id = "warning-title">are you sure?</h2>
                 <button class = "button" id = "closemenu" onclick = "reldlgcl(event);">Yes</button>
                 <button class = "button" id = "closemenu" onclick = "reldlgcl(event);">No</button>
             </dialog>
+            
             <dialog class = "confirmdialog wide" id = "warning-wide">
                 <h2 class = "medbig" id = "warning-wide-title">are you sure?</h2>
                 <button class = "button" id = "closemenu" onclick = "reldlgcl(event);">Yes</button>
                 <button class = "button" id = "closemenu" onclick = "reldlgcl(event);">No</button>
             </dialog>
+
+            <dialog class = "daydisplay" id = "daydisplay">
+                <h2 class = "medbig" id = "daydisplay-title">are you sure?</h2>
+                <button class = "button" id = "closemenu" onclick = "reldlgcl(event);">Yes</button>
+                <button class = "button" id = "closemenu" onclick = "reldlgcl(event);">No</button>
+            </dialog>
+
         </div>
 
         <script type="text/javascript" src="dates.js"></script>

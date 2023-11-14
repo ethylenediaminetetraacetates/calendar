@@ -676,6 +676,7 @@ svg{
 }
 
 .confirmdialog{
+
     background-color: var(--midground-color-default);
     border-radius: 2vmin;
     border-style: solid;
@@ -697,6 +698,45 @@ svg{
 }
 
 .confirmdialog.wide{
+
+    background-color: var(--midground-color-default);
+    border-radius: 2vmin;
+    border-style: solid;
+    border-color: var(--background-color-reverse);
+
+    height: 20vmin;
+    width: 80vmin;
+
+    animation-delay: 0ms;
+    animation-play-state: running;
+    animation-name: dialog-jumpup-wide;
+    animation-duration: 200ms;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    
+    transition-duration: 500ms;
+
+    text-align: center;
+}
+
+.grid-dlg:not([open]){
+    display:none;
+}
+
+.grid-dlg[open]{
+    display:grid;
+}
+
+.flex-dlg:not([open]){
+    display:none;
+}
+
+.flex-dlg[open]{
+    display:flex;
+}
+
+.daydisplay{
+
     background-color: var(--midground-color-default);
     border-radius: 2vmin;
     border-style: solid;
