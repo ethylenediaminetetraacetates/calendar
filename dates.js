@@ -60,6 +60,17 @@ calendar.genmonths = function(){
     document.getElementById("calendargrid").innerHTML = temp;
 }
 
+//Shift Starting Day LEFT
+calendar.ssdleft = function(){
+    calendar.month.firstday--;
+}
+calendar.ssdright = function(){
+    calendar.month.firstday++;
+}
+calendar.ssdreset = function(){
+    calendar.refreshdaymonths();
+}
+
 calendar.dayclick = function(day){
     dialog("warning-wide",calendar.monthlookup[calendar.selecteddate.getMonth()]+" "+day+", "+calendar.selecteddate.getFullYear());
 }

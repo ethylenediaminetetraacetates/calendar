@@ -4,6 +4,20 @@ let themeind = 0;
 let fontarr = ["rounded.css","sans-serif I.css","sans-serif II.css","sans-serif III.css","serif.css", "monospace.css", "playful.css"]
 let fontind = 0;
 
+let totaldayabbrs = [
+    [
+        ["S","M","T","W","T","F","S"],
+        ["Su","M","Tu","W","Th","F","Sa"],
+        ["Su","Mo","Tu","We","Th","Fr","Sa"],
+        ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
+    ],
+    [
+        ["S","S","M","T","W","T","F"],
+        ["Sa","Su","M","Tu","W","Th","F"],
+        ["Sa","Su","Mo","Tu","We","Th","Fr"],
+        ["Sat","Sun","Mon","Tue","Wed","Thu","Fri"]
+    ]
+]
 
 let dayabbrs = [
     ["S","M","T","W","T","F","S"],
@@ -11,6 +25,28 @@ let dayabbrs = [
     ["Su","Mo","Tu","We","Th","Fr","Sa"],
     ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
 ]
+
+
+
+function dastart(i){
+    dayabbrs = totaldayabbrs[i]
+
+    document.getElementById("dayabbrindicator").innerHTML = 
+    dayabbrs[settings.dayabbr][1] + ", "+ 
+    dayabbrs[settings.dayabbr][2] + ", "+
+    dayabbrs[settings.dayabbr][3];
+
+    if(i == 0){
+        calendar.ssdreset();
+        calendar.genmonths()
+    }else if(i == 1){
+        calendar.ssdreset();
+        calendar.ssdright();
+        calendar.genmonths()
+    }
+
+    updsettings();
+}
 
 let settings = {
     dayabbr:0,
@@ -39,7 +75,7 @@ function updsettings(){
 }
 
 function daup(){
-    if(settings.dayabbr > dayabbrs.length - 1){
+    if(settings.dayabbr > dayabbrs.length - 2){
         settings.dayabbr = 3;
     }else{
         settings.dayabbr = settings.dayabbr + 1;
