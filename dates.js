@@ -79,6 +79,7 @@ calendar.refreshall = function(){
     calendar.refreshdaymonths();
     calendar.refreshdisplay();
     calendar.genmonths();
+    dastart(dasval);
 }
 
 calendar.refreshall();

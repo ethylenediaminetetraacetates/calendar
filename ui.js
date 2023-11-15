@@ -26,9 +26,14 @@ let dayabbrs = [
     ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
 ]
 
+let dasval = 0;
+
 
 
 function dastart(i){
+
+    dasval = i;
+
     dayabbrs = totaldayabbrs[i]
 
     document.getElementById("dayabbrindicator").innerHTML = 
