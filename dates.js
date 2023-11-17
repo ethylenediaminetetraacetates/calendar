@@ -82,4 +82,6 @@ calendar.refreshall = function(){
     dastart(dasval);
 }
 
-calendar.refreshall();
+window.onload = function(){
+    calendar.refreshall();
+}
