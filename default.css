@@ -527,6 +527,8 @@ span.low{
 }
 
 .radiobuttontab{
+    cursor: pointer;
+
     text-align: center;
 
     border-color:transparent;
@@ -543,7 +545,6 @@ span.low{
 }
 
 .radiobuttontab:not(:hover){
-
     background-color: var(--foreground-color-grade10);
     color: var(--text-color-default);
     margin-top: 0vmin;
@@ -689,7 +690,9 @@ svg{
 }
 
 .dialog::backdrop{
-    background-color: var(--background-color-default)/80;
+    background-color: var(--background-color-default);
+
+    opacity:0.8;
 
     transition-duration: 500ms;
 

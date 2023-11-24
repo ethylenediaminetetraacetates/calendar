@@ -10,12 +10,6 @@ let totaldayabbrs = [
         ["Su","M","Tu","W","Th","F","Sa"],
         ["Su","Mo","Tu","We","Th","Fr","Sa"],
         ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
-    ],
-    [
-        ["S","S","M","T","W","T","F"],
-        ["Sa","Su","M","Tu","W","Th","F"],
-        ["Sa","Su","Mo","Tu","We","Th","Fr"],
-        ["Sat","Sun","Mon","Tue","Wed","Thu","Fri"]
     ]
 ]
 
@@ -28,27 +22,36 @@ let dayabbrs = [
 
 let dasval = 0;
 
-
-
 function dastart(i){
 
     dasval = i;
 
-    dayabbrs = totaldayabbrs[i]
+    dayabbrs = totaldayabbrs[0]
 
     document.getElementById("dayabbrindicator").innerHTML = 
     dayabbrs[settings.dayabbr][1] + ", "+ 
     dayabbrs[settings.dayabbr][2] + ", "+
     dayabbrs[settings.dayabbr][3];
 
-    if(i == 0){
-        calendar.ssdreset();
-        calendar.genmonths()
-    }else if(i == 1){
-        calendar.ssdreset();
-        calendar.ssdright();
-        calendar.genmonths()
+    j=0;
+
+    calendar.ssdreset();
+    while(j!=i){
+        if(j>i){
+            calendar.ssdright();
+            j--;
+            for(let x = 0; x < 4; x++){
+                dayabbrs[x].push(dayabbrs[i].shift())
+            }
+        }else if(j<i){
+            calendar.ssdleft();
+            j++;
+            for(let x = 0; x < 4; x++){
+                dayabbrs[x].unshift(dayabbrs[i].pop())
+            }
+        }
     }
+    calendar.genmonths()
 
     updsettings();
 }
