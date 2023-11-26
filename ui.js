@@ -5,12 +5,10 @@ let fontarr = ["rounded.css","sans-serif I.css","sans-serif II.css","sans-serif 
 let fontind = 0;
 
 let totaldayabbrs = [
-    [
-        ["S","M","T","W","T","F","S"],
-        ["Su","M","Tu","W","Th","F","Sa"],
-        ["Su","Mo","Tu","We","Th","Fr","Sa"],
-        ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
-    ]
+    ["S","M","T","W","T","F","S"],
+    ["Su","M","Tu","W","Th","F","Sa"],
+    ["Su","Mo","Tu","We","Th","Fr","Sa"],
+    ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
 ]
 
 let dayabbrs = [
@@ -26,7 +24,9 @@ function dastart(i){
 
     dasval = i;
 
-    dayabbrs = totaldayabbrs[0]
+    dayabbrs = JSON.parse(JSON.stringify((totaldayabbrs))); //workaround to copy without refs
+
+    console.log(dayabbrs);
 
     document.getElementById("dayabbrindicator").innerHTML = 
     dayabbrs[settings.dayabbr][1] + ", "+ 
@@ -41,19 +41,18 @@ function dastart(i){
             calendar.ssdright();
             j--;
             for(let x = 0; x < 4; x++){
-                dayabbrs[x].push(dayabbrs[i].shift())
+                dayabbrs[x].push(dayabbrs[x].shift())
             }
         }else if(j<i){
             calendar.ssdleft();
             j++;
             for(let x = 0; x < 4; x++){
-                dayabbrs[x].unshift(dayabbrs[i].pop())
+                dayabbrs[x].unshift(dayabbrs[x].pop())
             }
         }
     }
-    calendar.genmonths()
-
     updsettings();
+    calendar.genmonths()
 }
 
 let settings = {

@@ -47,6 +47,13 @@ calendar.monthshiftup = function(){
 calendar.genmonths = function(){
     temp = "";
 
+    while(calendar.month.firstday < 0){
+        calendar.month.firstday += 7
+    }
+    while(calendar.month.firstday > 6){
+        calendar.month.firstday -= 7
+    }
+
     for(let i = 0; i < 42; i++){
         if(calendar.month.firstday > i){
             temp += "<div class = \"calendargrid-inactive-element\"></div>";
