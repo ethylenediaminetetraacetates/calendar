@@ -789,6 +789,47 @@ svg{
     text-align: center;
 }
 
+.notifstack{
+    position: absolute;
+    top: 5vmin;
+    right: 5vmin;
+    display: grid;
+    float: right;
+}
+
+@keyframes notifshow{
+    0%{
+        background-color: transparent;
+        margin-right: -50vmin;
+    }
+    100%{
+        margin-right: 0vmin;
+    }
+
+}
+
+.notification{
+    height: 10vmin;
+    width: 40vmin;
+    background-color: var(--foreground-color-grade60);
+    border-radius: 2vmin;
+    border-width: 0;
+    transition-duration: 500ms;
+
+    animation-delay: 0ms;
+    animation-play-state: running;
+    animation-name: notifshow;
+    animation-duration: 200ms;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+.notification.exp{
+    height: 15vmin;
+    background-color: var(--foreground-color-grade70);
+    transition-duration: 500ms;
+}
+
 .grid-dlg:not([open]){
     display:none;
 }

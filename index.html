@@ -95,110 +95,117 @@
             </div>
         </div>
 
-        <div class = "blur-bg-smooth">
-            <dialog class = "dialog dialog-closed" id = "menu">
+            <div class = "notifstack" id = "notifstack">
+                <dialog class = "notification" id = "notif0">
 
-                <div class = "dialog-top">
-                    <button class = "button" id = "closemenu" onclick = "closemenu();">close this menu</button>
-                </div>
-
-                <h2 class = "medbig">menu</h2>
-
-                <h3 class = "med">tinker with the settings as you see fit</h3>
-
-                <h2 class = "medbig">display</h2>
-
-                <h3 class = "med">day name abbreviation</h3>
-
-                <div class = "previousnextmenugrid">
-                    <button class = "autofit button" onclick = "dadown()">&lt;</button>
-                    <span class = "low smallspandisplay" id = "dayabbrindicator">M, T, W</span>
-                    <button class = "autofit button" onclick = "daup()">&gt;</button>
-                </div>
-
-                <h3 class = "med">starting day of week</h3>
-
-                <button class = "radiobuttontab" onclick = "dastart(0);">sunday</button>
-                <button class = "radiobuttontab" onclick = "dastart(1);">monday</button>
-
-                <h2 class = "medbig">themes</h2>
-
-                <h3 class = "med">color palette</h3>
-
-                <div class = "previousnextmenugrid">
-                    <button class = "autofit button" onclick = "modedown()">&lt;</button>
-                    <span class = "low smallspandisplay" id = "themeindicator">charcoal</span>
-                    <button class = "autofit button" onclick = "modeup()">&gt;</button>
-                </div>
-
-                <div class = "paintchipgrid">
-                    <div class = "paintchip" style="background-color: var(--background-color-reverse)"></div>
-                    <div class = "paintchip" style="background-color: var(--foreground-color-reverse)"></div>
-
-                    <div class = "paintchip" style="background-color: var(--background-color-default)"></div>
-                    <div class = "paintchip" style="background-color: var(--midground-color-default)"></div>
-                    <div class = "paintchip" style="background-color: var(--foreground-color-default)"></div>
-                    <div class = "paintchip" style="background-color: var(--foreground-color-grade10)"></div>
-                    <div class = "paintchip" style="background-color: var(--foreground-color-grade20)"></div>
-                    <div class = "paintchip" style="background-color: var(--foreground-color-grade30)"></div>
-                    <div class = "paintchip" style="background-color: var(--foreground-color-grade40)"></div>
-                    <div class = "paintchip" style="background-color: var(--foreground-color-grade50)"></div>
-                    <div class = "paintchip" style="background-color: var(--foreground-color-grade60)"></div>
-                    <div class = "paintchip" style="background-color: var(--foreground-color-grade70)"></div>
-                    <div class = "paintchip" style="background-color: var(--foreground-color-grade80)"></div>
-                    <div class = "paintchip" style="background-color: var(--foreground-color-grade90)"></div>
-
-                    <div class = "paintchip" style="background-color: var(--background-color-alerting)"></div>
-                    <div class = "paintchip" style="background-color: var(--text-color-default)"></div>
-                    <div class = "paintchip" style="background-color: var(--selection-color)"></div>
-
-                    <div class = "paintchip" style="background-color: var(--checked-color)"></div>
-                    <div class = "paintchip" style="background-color: var(--denied-color)"></div>
-                </div>
-
-                <h3 class = "med">font</h3>
-
-                <div class = "previousnextmenugrid">
-                    <button class = "autofit button" onclick = "fontdown()">&lt;</button>
-                    <span class = "low smallspandisplay" id = "fontindicator">rounded</span>
-                    <button class = "autofit button" onclick = "fontup()">&gt;</button>
-                </div>
-
-            <h2 class = "medbig">dev zone</h2>
-
-            <h3 class = "med">autosaving</h3>
-
-            <h3 class = "med">checkbox test</h3>
-
-            <div class = "checkboxgrid" onclick="lssavetoggle()">
-                <button class = "checkbox active" id = "lssavetoggle"></button>
-                <h2 class = "low smallspandisplay">save to localstorage</h2>
+                </dialog>
             </div>
 
-            <h3 class = "med">popup system test</h3>
 
-            <button class = "autofit button" onclick = "scareshake(500,1);dialog('warning','are you sure?');">show with shake</button>
-            <button class = "autofit button" onclick = "dialog('warning','are you sure?');">show without shake</button>
+            <div class = "blur-bg-smooth">
+                <dialog class = "dialog dialog-closed" id = "menu">
 
-            <h3 class = "med">wide popup system test</h3>
+                    <div class = "dialog-top">
+                        <button class = "button" id = "closemenu" onclick = "closemenu();">close this menu</button>
+                    </div>
 
-            <button class = "autofit button" onclick = "scareshake(500,1);dialog('warning-wide','are you sure?');">show with shake</button>
-            <button class = "autofit button" onclick = "dialog('warning-wide','are you sure?');">show without shake</button>
+                    <h2 class = "medbig">menu</h2>
 
-            <h3 class = "med">shake system test</h3>
-            <button class = "autofit button" onclick = "scareshake(500,0.1);">subtle</button>
-            <button class = "autofit button" onclick = "scareshake(500,0.5);">low</button>
-            <button class = "autofit button" onclick = "scareshake(500,1);">regular</button>
-            <button class = "autofit button" onclick = "scareshake(500,2);">strong</button>
-            <button class = "autofit button" onclick = "scareshake(500,10);">vigorous</button>
-            <button class = "autofit button" onclick = "scareshake(500,20);">in-your-face</button>
+                    <h3 class = "med">tinker with the settings as you see fit</h3>
 
-            <h2 class = "medbig">other</h2>
+                    <h2 class = "medbig">display</h2>
 
-            <h2 class = "med"><a href = "https://github.com/ethylenediaminetetraacetates/calendar">view source on github</a></h2>
+                    <h3 class = "med">day name abbreviation</h3>
 
-            </dialog>
-        </div>
+                    <div class = "previousnextmenugrid">
+                        <button class = "autofit button" onclick = "dadown()">&lt;</button>
+                        <span class = "low smallspandisplay" id = "dayabbrindicator">M, T, W</span>
+                        <button class = "autofit button" onclick = "daup()">&gt;</button>
+                    </div>
+
+                    <h3 class = "med">starting day of week</h3>
+
+                    <button class = "radiobuttontab" onclick = "dastart(0);">sunday</button>
+                    <button class = "radiobuttontab" onclick = "dastart(1);">monday</button>
+
+                    <h2 class = "medbig">themes</h2>
+
+                    <h3 class = "med">color palette</h3>
+
+                    <div class = "previousnextmenugrid">
+                        <button class = "autofit button" onclick = "modedown()">&lt;</button>
+                        <span class = "low smallspandisplay" id = "themeindicator">charcoal</span>
+                        <button class = "autofit button" onclick = "modeup()">&gt;</button>
+                    </div>
+
+                    <div class = "paintchipgrid">
+                        <div class = "paintchip" style="background-color: var(--background-color-reverse)"></div>
+                        <div class = "paintchip" style="background-color: var(--foreground-color-reverse)"></div>
+
+                        <div class = "paintchip" style="background-color: var(--background-color-default)"></div>
+                        <div class = "paintchip" style="background-color: var(--midground-color-default)"></div>
+                        <div class = "paintchip" style="background-color: var(--foreground-color-default)"></div>
+                        <div class = "paintchip" style="background-color: var(--foreground-color-grade10)"></div>
+                        <div class = "paintchip" style="background-color: var(--foreground-color-grade20)"></div>
+                        <div class = "paintchip" style="background-color: var(--foreground-color-grade30)"></div>
+                        <div class = "paintchip" style="background-color: var(--foreground-color-grade40)"></div>
+                        <div class = "paintchip" style="background-color: var(--foreground-color-grade50)"></div>
+                        <div class = "paintchip" style="background-color: var(--foreground-color-grade60)"></div>
+                        <div class = "paintchip" style="background-color: var(--foreground-color-grade70)"></div>
+                        <div class = "paintchip" style="background-color: var(--foreground-color-grade80)"></div>
+                        <div class = "paintchip" style="background-color: var(--foreground-color-grade90)"></div>
+
+                        <div class = "paintchip" style="background-color: var(--background-color-alerting)"></div>
+                        <div class = "paintchip" style="background-color: var(--text-color-default)"></div>
+                        <div class = "paintchip" style="background-color: var(--selection-color)"></div>
+
+                        <div class = "paintchip" style="background-color: var(--checked-color)"></div>
+                        <div class = "paintchip" style="background-color: var(--denied-color)"></div>
+                    </div>
+
+                    <h3 class = "med">font</h3>
+
+                    <div class = "previousnextmenugrid">
+                        <button class = "autofit button" onclick = "fontdown()">&lt;</button>
+                        <span class = "low smallspandisplay" id = "fontindicator">rounded</span>
+                        <button class = "autofit button" onclick = "fontup()">&gt;</button>
+                    </div>
+
+                <h2 class = "medbig">dev zone</h2>
+
+                <h3 class = "med">autosaving</h3>
+
+                <h3 class = "med">checkbox test</h3>
+
+                <div class = "checkboxgrid" onclick="lssavetoggle()">
+                    <button class = "checkbox active" id = "lssavetoggle"></button>
+                    <h2 class = "low smallspandisplay">save to localstorage</h2>
+                </div>
+
+                <h3 class = "med">popup system test</h3>
+
+                <button class = "autofit button" onclick = "scareshake(500,1);dialog('warning','are you sure?');">show with shake</button>
+                <button class = "autofit button" onclick = "dialog('warning','are you sure?');">show without shake</button>
+
+                <h3 class = "med">wide popup system test</h3>
+
+                <button class = "autofit button" onclick = "scareshake(500,1);dialog('warning-wide','are you sure?');">show with shake</button>
+                <button class = "autofit button" onclick = "dialog('warning-wide','are you sure?');">show without shake</button>
+
+                <h3 class = "med">shake system test</h3>
+                <button class = "autofit button" onclick = "scareshake(500,0.1);">subtle</button>
+                <button class = "autofit button" onclick = "scareshake(500,0.5);">low</button>
+                <button class = "autofit button" onclick = "scareshake(500,1);">regular</button>
+                <button class = "autofit button" onclick = "scareshake(500,2);">strong</button>
+                <button class = "autofit button" onclick = "scareshake(500,10);">vigorous</button>
+                <button class = "autofit button" onclick = "scareshake(500,20);">in-your-face</button>
+
+                <h2 class = "medbig">other</h2>
+
+                <h2 class = "med"><a href = "https://github.com/ethylenediaminetetraacetates/calendar">view source on github</a></h2>
+
+                </dialog>
+            </div>
 
         <div id = "dialogstack">
 
@@ -220,12 +227,6 @@
                 <button class = "button" id = "closemenu" onclick = "reldlgcl(event);">No</button>
             </dialog>
 
-        </div>
-
-        <div id = "notifstack">
-            <dialog class = "notification" id = "notif0">
-
-            </dialog>
         </div>
 
         <script type="text/javascript" src="dates.js"></script>
