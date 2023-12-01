@@ -431,6 +431,27 @@ span.low{
     font-family: var(--font-default);
 }
 
+.calendargrid-element-today{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--foreground-color-grade30);
+
+    text-align: center;
+    float:left;
+
+    color: var(--text-color-default);
+
+    margin: 1vmin;
+    border-radius: 2vmin;
+
+    font-size: 3vmin;
+    font-family: var(--font-default);
+}
+
+
 .calendargrid-inactive-element{
 
     display: flex;
