@@ -20,6 +20,18 @@ let dayabbrs = [
 
 let dasval = 0;
 
+function loading(){
+    temp = true;
+    document.getElementById("loaderdialog").showModal();
+    while(temp){
+        document.getElementById("loadingtext").innerText = "loading..."
+        temp = false;
+    }
+    document.getElementById("loaderdialog").close();
+}
+loading();
+
+
 function dastart(i){
 
     dasval = i;

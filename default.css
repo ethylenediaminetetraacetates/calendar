@@ -411,6 +411,20 @@ span.low{
     transition-duration: 500ms;
 }
 
+@keyframes calendargrid-element-popdown{
+    0%{
+        opacity: 0;
+        transform: scale(1.2);
+    }
+    50%{
+        transform: scale(0.9);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 .calendargrid-element{
 
     display: flex;
@@ -419,6 +433,8 @@ span.low{
 
     background-color: var(--background-color-default);
 
+    transform: scale(1);
+
     text-align: center;
     float:left;
 
@@ -427,8 +443,37 @@ span.low{
     margin: 1vmin;
     border-radius: 2vmin;
 
+    border-width: 0.5vmin;
+    border-color: var(--foreground-color-grade30);
+    border-style: solid;
+
     font-size: 3vmin;
     font-family: var(--font-default);
+
+    animation-delay: 0ms;
+    animation-play-state: running;
+    animation-name: calendargrid-element-popdown;
+    animation-duration: 200ms;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+
+    transition-duration: 500ms;
+}
+
+.calendargrid-element:hover{
+    background-color: var(--midground-color-default);
+
+    transform: scale(1.05);
+
+    transition-duration: 100ms;
+}
+
+.calendargrid-element-today:hover{
+    background-color: var(--foreground-color-grade20);
+
+    transform: scale(1.05);
+
+    transition-duration: 100ms;
 }
 
 .calendargrid-element-today{
@@ -437,7 +482,7 @@ span.low{
     justify-content: center;
     align-items: center;
 
-    background-color: var(--foreground-color-grade30);
+    background-color: var(--foreground-color-grade10);
 
     text-align: center;
     float:left;
@@ -447,8 +492,21 @@ span.low{
     margin: 1vmin;
     border-radius: 2vmin;
 
+    border-width: 0.5vmin;
+    border-color: var(--foreground-color-grade50);
+    border-style: solid;
+
     font-size: 3vmin;
     font-family: var(--font-default);
+
+    animation-delay: 0ms;
+    animation-play-state: running;
+    animation-name: calendargrid-element-popdown;
+    animation-duration: 200ms;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+
+    transition-duration: 500ms;
 }
 
 
@@ -470,6 +528,17 @@ span.low{
 
     font-size: max(3vmin,10pt);
     font-family: var(--font-default);
+
+    border-width: 0.5vmin;
+    border-color: var(--foreground-color-grade10);
+    border-style: solid;
+
+    animation-delay: 0ms;
+    animation-play-state: running;
+    animation-name: calendargrid-element-popdown;
+    animation-duration: 200ms;
+    animation-iteration-count: 1;
+    animation-direction: normal;
 }
 
 .flexbox-text{
@@ -645,12 +714,20 @@ svg{
 @keyframes dialog-popup{
     0%{
         margin-top: 100vh;
-        transform: rotate(0deg);
+        opacity: 0;
+        transform: rotate(0deg) scale(0.5);
     }
     100%{
         margin-top: 10vh;
-        transform: rotate(0deg);
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
     }
+}
+
+.loaderdialog{
+    height:100vh;
+    width:100vw;
+    background-color: var(--midground-color-default);
 }
 
 .dialog{
@@ -677,6 +754,8 @@ svg{
 .dialog-open{
     margin-top: 10vh;
 
+    opacity: 1;
+
     background-color: var(--midground-color-default);
 
     animation-delay: 0ms;
@@ -690,12 +769,16 @@ svg{
 .dialog-closed{
     margin-top: 100vh;
 
+    opacity: 0;
+
     animation-delay: 0ms;
     animation-play-state: running;
     animation-name: dialog-popup;
     animation-duration: 100ms;
     animation-iteration-count: 1;
     animation-direction: reverse;
+
+    transform: rotate(0deg) scale(0.5);
 
     transition: all 100ms;
 }
@@ -738,31 +821,13 @@ svg{
 
 @keyframes dialog-jumpup{
     0%{
-        height: 0vmin;
-        width: 0vmin;
+        transform: scale(0);
     }
     50%{
-        height: 25vmin;
-        width: 50vmin;
+        transform: scale(1.25);
     }
     100%{
-        height: 20vmin;
-        width: 40vmin;
-    }
-}
-
-@keyframes dialog-jumpup-wide{
-    0%{
-        height: 0vmin;
-        width: 0vmin;
-    }
-    50%{
-        height: 25vmin;
-        width: 100vmin;
-    }
-    100%{
-        height: 20vmin;
-        width: 80vmin;
+        transform: scale(1);
     }
 }
 
@@ -800,7 +865,7 @@ svg{
 
     animation-delay: 0ms;
     animation-play-state: running;
-    animation-name: dialog-jumpup-wide;
+    animation-name: dialog-jumpup;
     animation-duration: 200ms;
     animation-iteration-count: 1;
     animation-direction: normal;
@@ -879,7 +944,7 @@ svg{
 
     animation-delay: 0ms;
     animation-play-state: running;
-    animation-name: dialog-jumpup-wide;
+    animation-name: dialog-jumpup;
     animation-duration: 200ms;
     animation-iteration-count: 1;
     animation-direction: normal;
