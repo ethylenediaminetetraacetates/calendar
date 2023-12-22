@@ -90,7 +90,7 @@ span.low{
     height: min(10vh,10vmin);
     background-color: #FFFFFF;
 
-    border-style:solid;
+    border-style: solid solid none solid;
     border-width: 0.1vmin;
     border-radius: 2vmin 2vmin 0 0;
     border-color: #000000;
@@ -223,7 +223,7 @@ span.low{
 
     border-radius: 0 0 2vmin 2vmin;
 
-    border-style:solid;
+    border-style: none solid solid solid;
     border-width: 0.1vmin;
     border-color: #000000;
 
