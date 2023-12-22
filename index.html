@@ -18,7 +18,7 @@
         <div class = "titlegrid">
             <div class = "hamburgermenu">
                 <button id = "menubtnwrapper" class = "hiddenbuttonwrapper" onclick = "openmenu();">
-                    <svg width = "13.5vw" height = "15vmin" id = "menubtn" onclick = "openmenu();">
+                    <svg width = "13.5vw" height = "15vmin" id = "menubtn" onclick = "openmenu();" class = "hamburgermenubutton">
                         <rect 
                             width="7.5vmin" 
                             height="1vmin" 
@@ -222,9 +222,13 @@
             </dialog>
 
             <dialog class = "daydisplay" id = "daydisplay">
-                <h2 class = "medbig" id = "daydisplay-title">are you sure?</h2>
-                <button class = "button" id = "closemenu" onclick = "reldlgcl(event);">Yes</button>
-                <button class = "button" id = "closemenu" onclick = "reldlgcl(event);">No</button>
+                <div class>
+                    <h2 class = "medbig">editing a day</h2>
+                    <h2 class = "med" id = "daydisplay-title">insert day</h2>
+                </div>
+                <hr>
+                <button class = "button" id = "closemenu" onclick = "reldlgcl(event);">Save changes</button>
+                <button class = "button" id = "closemenu" onclick = "reldlgcl(event);">Cancel</button>
             </dialog>
 
         </div>

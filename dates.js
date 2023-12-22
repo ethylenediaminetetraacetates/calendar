@@ -83,7 +83,7 @@ calendar.ssdreset = function(){
 }
 
 calendar.dayclick = function(day){
-    dialog("warning-wide",calendar.monthlookup[calendar.selecteddate.getMonth()]+" "+day+", "+calendar.selecteddate.getFullYear());
+    dialog("daydisplay",calendar.monthlookup[calendar.selecteddate.getMonth()]+" "+day+", "+calendar.selecteddate.getFullYear());
 }
 
 calendar.refreshall = function(){

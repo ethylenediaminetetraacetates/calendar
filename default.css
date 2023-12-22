@@ -388,6 +388,7 @@ span.low{
     grid-template-rows: repeat(6,1fr);
 
     height: min(60vh,60vmin);
+
     background-color: var(--foreground-color-default);
 
     overflow-y: show;
@@ -442,6 +443,8 @@ span.low{
 
     margin: 1vmin;
     border-radius: 2vmin;
+
+    cursor: pointer;
 
     border-width: 0.5vmin;
     border-color: var(--foreground-color-grade30);
@@ -614,6 +617,10 @@ span.low{
     border-radius:0;
 
     transition-duration: 500ms;
+}
+
+.hamburgermenubutton{
+    opacity: 1;
 }
 
 .radiobuttontab{
@@ -939,7 +946,7 @@ svg{
     border-style: solid;
     border-color: var(--background-color-reverse);
 
-    height: 20vmin;
+    height: 80vmin;
     width: 80vmin;
 
     animation-delay: 0ms;
