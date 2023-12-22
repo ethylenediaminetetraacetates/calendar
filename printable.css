@@ -243,17 +243,19 @@ span.low{
     text-align: left;
     float:left;
 
-    color: #000000;
+    color: #A0A0A0;
 
     margin: 1vmin;
     border-radius: 2vmin 2vmin 2vmin 2vmin;
     cursor: pointer;
 
+    padding: 1vmin;
+
     border-width: 0.5vmin;
     border-color: #808080;
     border-style: solid;
 
-    font-size: 3vmin;
+    font-size: 2vmin;
     font-family: var(--font-default);
 }
 
@@ -268,12 +270,14 @@ span.low{
     text-align: center;
     float:left;
 
-    color: var(--text-color-default);
+    color: #A0A0A0;
 
     margin: 1vmin;
     border-radius: 2vmin;
 
-    font-size: max(3vmin,10pt);
+    padding: 1vmin;
+
+    font-size: 2vmin;
     font-family: var(--font-default);
 
     border-width: 0.4vmin;
