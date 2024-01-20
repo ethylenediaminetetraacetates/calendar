@@ -5,30 +5,9 @@ body{
     transition: all 500ms ease, transform 0 ease;
 }
 
-@media screen and (min-aspect-ratio:3/1){
-    :root{
-        --grid-edge: 35vw;
-    }
-}
-@media screen and (min-aspect-ratio:5/3) and (max-aspect-ratio:3/1){
-    :root{
-        --grid-edge: 20vw;
-    }
-}
-@media screen and (min-aspect-ratio:4/3) and (max-aspect-ratio:5/3){
-    :root{
-        --grid-edge: 10vw;
-    }
-}
-@media screen and (min-aspect-ratio:1/1) and (max-aspect-ratio:4/3){
-    :root{
-        --grid-edge: 5vw;
-    }
-}
-@media screen and (max-aspect-ratio:1/1){
-    :root{
-        --grid-edge: 0vw;
-    }
+.maincenterflex{
+    display: flex;
+    justify-content: center;
 }
 
 @keyframes pop{
@@ -338,14 +317,12 @@ span.low{
     grid-template-rows: repeat(1,1fr);
 
     height: min(5vh,5vmin);
+    
     background-color: var(--midground-color-default);
 
     overflow-y: show;
 
     padding: 1vmin 2vmin 1vmin 2vmin;
-
-    margin-left: var(--grid-edge);
-    margin-right: var(--grid-edge);
 
     border-radius: 0 0 0 0;
 
@@ -366,6 +343,8 @@ span.low{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    overflow: hidden;
 
     background-color: var(--background-color-default);
 
@@ -388,6 +367,7 @@ span.low{
     grid-template-rows: repeat(6,1fr);
 
     height: min(60vh,60vmin);
+    width: min(96vh,96vmin);
 
     background-color: var(--foreground-color-default);
 
@@ -984,15 +964,13 @@ svg{
     grid-template-rows: repeat(1,1fr);
 
     height: 5vmin;
+    width: 95vmin;
 
     border-color: var(--text-color-default);
     border-width: 0.1vmin;
     border-style: solid;
 
     border-radius: 0;
-
-    margin-left: var(--grid-edge);
-    margin-right: var(--grid-edge);
 
     transition-duration: 500ms;
 }

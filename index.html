@@ -68,31 +68,36 @@
 
             </div>
         </div>
-        <div class = "fullcalendargrid">
-            <div class = "calendarmonthgrid">
+        <div class = "maincenterflex">
 
-                    <button class = "calendarmonthgrid-element" onclick = "calendar.monthshiftdown();">&lt;</button>
+            <div class = "fullcalendargrid">
+                <div class = "calendarmonthgrid">
 
-                    <div class = "calendarmonthgrid-monthdisplay">
-                        <span class = "yearspan" id = "yeardisplay"></span>
-                        <span id = "monthdisplay"></span>
-                    </div>
+                        <button class = "calendarmonthgrid-element" onclick = "calendar.monthshiftdown();">&lt;</button>
 
-                    <button class = "calendarmonthgrid-element" onclick = "calendar.monthshiftup();">&gt;</button>
+                        <div class = "calendarmonthgrid-monthdisplay">
+                            <span class = "yearspan" id = "yeardisplay"></span>
+                            <span id = "monthdisplay"></span>
+                        </div>
 
+                        <button class = "calendarmonthgrid-element" onclick = "calendar.monthshiftup();">&gt;</button>
+
+                </div>
+                <div class = "calendardaygrid">
+                    <div class = "calendardaygrid-element">S</div>
+                    <div class = "calendardaygrid-element">M</div>
+                    <div class = "calendardaygrid-element">T</div>
+                    <div class = "calendardaygrid-element">W</div>
+                    <div class = "calendardaygrid-element">T</div>
+                    <div class = "calendardaygrid-element">F</div>
+                    <div class = "calendardaygrid-element">S</div>
+                </div>
+                
+                <div class = "calendargrid" id = "calendargrid">
+
+                </div>
             </div>
-            <div class = "calendardaygrid">
-                <div class = "calendardaygrid-element">S</div>
-                <div class = "calendardaygrid-element">M</div>
-                <div class = "calendardaygrid-element">T</div>
-                <div class = "calendardaygrid-element">W</div>
-                <div class = "calendardaygrid-element">T</div>
-                <div class = "calendardaygrid-element">F</div>
-                <div class = "calendardaygrid-element">S</div>
-            </div>
-            <div class = "calendargrid" id = "calendargrid">
 
-            </div>
         </div>
 
             <div class = "notifstack" id = "notifstack">
@@ -138,29 +143,33 @@
                         <button class = "autofit button" onclick = "modeup()">&gt;</button>
                     </div>
 
-                    <div class = "paintchipgrid">
-                        <div class = "paintchip" style="background-color: var(--background-color-reverse)"></div>
-                        <div class = "paintchip" style="background-color: var(--foreground-color-reverse)"></div>
+                    <div class = "maincenterflex">
 
-                        <div class = "paintchip" style="background-color: var(--background-color-default)"></div>
-                        <div class = "paintchip" style="background-color: var(--midground-color-default)"></div>
-                        <div class = "paintchip" style="background-color: var(--foreground-color-default)"></div>
-                        <div class = "paintchip" style="background-color: var(--foreground-color-grade10)"></div>
-                        <div class = "paintchip" style="background-color: var(--foreground-color-grade20)"></div>
-                        <div class = "paintchip" style="background-color: var(--foreground-color-grade30)"></div>
-                        <div class = "paintchip" style="background-color: var(--foreground-color-grade40)"></div>
-                        <div class = "paintchip" style="background-color: var(--foreground-color-grade50)"></div>
-                        <div class = "paintchip" style="background-color: var(--foreground-color-grade60)"></div>
-                        <div class = "paintchip" style="background-color: var(--foreground-color-grade70)"></div>
-                        <div class = "paintchip" style="background-color: var(--foreground-color-grade80)"></div>
-                        <div class = "paintchip" style="background-color: var(--foreground-color-grade90)"></div>
+                        <div class = "paintchipgrid">
+                            <div class = "paintchip" style="background-color: var(--background-color-reverse)"></div>
+                            <div class = "paintchip" style="background-color: var(--foreground-color-reverse)"></div>
 
-                        <div class = "paintchip" style="background-color: var(--background-color-alerting)"></div>
-                        <div class = "paintchip" style="background-color: var(--text-color-default)"></div>
-                        <div class = "paintchip" style="background-color: var(--selection-color)"></div>
+                            <div class = "paintchip" style="background-color: var(--background-color-default)"></div>
+                            <div class = "paintchip" style="background-color: var(--midground-color-default)"></div>
+                            <div class = "paintchip" style="background-color: var(--foreground-color-default)"></div>
+                            <div class = "paintchip" style="background-color: var(--foreground-color-grade10)"></div>
+                            <div class = "paintchip" style="background-color: var(--foreground-color-grade20)"></div>
+                            <div class = "paintchip" style="background-color: var(--foreground-color-grade30)"></div>
+                            <div class = "paintchip" style="background-color: var(--foreground-color-grade40)"></div>
+                            <div class = "paintchip" style="background-color: var(--foreground-color-grade50)"></div>
+                            <div class = "paintchip" style="background-color: var(--foreground-color-grade60)"></div>
+                            <div class = "paintchip" style="background-color: var(--foreground-color-grade70)"></div>
+                            <div class = "paintchip" style="background-color: var(--foreground-color-grade80)"></div>
+                            <div class = "paintchip" style="background-color: var(--foreground-color-grade90)"></div>
 
-                        <div class = "paintchip" style="background-color: var(--checked-color)"></div>
-                        <div class = "paintchip" style="background-color: var(--denied-color)"></div>
+                            <div class = "paintchip" style="background-color: var(--background-color-alerting)"></div>
+                            <div class = "paintchip" style="background-color: var(--text-color-default)"></div>
+                            <div class = "paintchip" style="background-color: var(--selection-color)"></div>
+
+                            <div class = "paintchip" style="background-color: var(--checked-color)"></div>
+                            <div class = "paintchip" style="background-color: var(--denied-color)"></div>
+                        </div>
+
                     </div>
 
                     <h3 class = "med">font</h3>
