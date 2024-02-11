@@ -5,6 +5,28 @@ body{
     transition: all 500ms ease, transform 0 ease;
 }
 
+.small{
+    transform: scale(0.9);
+}
+
+@keyframes trsmall{
+    0%{
+        transform: scale(0.9);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.tempbodyzoom{
+    animation-delay: 0ms;
+    animation-play-state: running;
+    animation-name: trsmall;
+    animation-duration: 500ms;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
 .maincenterflex{
     display: flex;
     justify-content: center;
@@ -665,10 +687,56 @@ svg{
     }
 }
 
+@keyframes loaderload{
+    0%{
+        background-color: rgba(var(--midground-color-default), 1);
+        backdrop-filter: blur(5vmin);
+    }
+    1%{
+        background-color: rgba(var(--midground-color-default), 0.8);
+    }
+    100%{
+        backdrop-filter: blur(2vmin);
+    }
+}
+
 .loaderdialog{
     height:100vh;
     width:100vw;
-    background-color: var(--midground-color-default);
+    background-color: rgba(var(--midground-color-default), 0.8);
+    backdrop-filter: blur(2vmin);
+
+    animation-delay: 0ms;
+    animation-play-state: running;
+    animation-name: loaderload;
+    animation-duration: 10000ms;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+@keyframes loaderloadremove{
+    0%{
+        background-color: rgba(var(--midground-color-default), 0.8);
+        backdrop-filter: blur(2vmin);
+    }
+    100%{
+        background-color: rgba(var(--midground-color-default), 0);
+        backdrop-filter: blur(0vmin);
+    }
+}
+
+.loaderdialogremove{
+    height:100vh;
+    width:100vw;
+    background-color: rgba(var(--midground-color-default), 0);
+    backdrop-filter: blur(0vmin);
+
+    animation-delay: 0ms;
+    animation-play-state: running;
+    animation-name: loaderloadremove;
+    animation-duration: 500ms;
+    animation-iteration-count: 1;
+    animation-direction: normal;
 }
 
 .dialog{

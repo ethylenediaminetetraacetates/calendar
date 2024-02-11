@@ -94,5 +94,6 @@ calendar.refreshall = function(){
 }
 
 window.onload = function(){
+    loaded = true;
     calendar.refreshall();
 }

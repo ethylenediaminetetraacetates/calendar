@@ -20,16 +20,30 @@ let dayabbrs = [
 
 let dasval = 0;
 
-function loading(){
-    temp = true;
-    document.getElementById("loaderdialog").showModal();
-    while(temp){
-        document.getElementById("loadingtext").innerText = "loading..."
-        temp = false;
+let loaded = false;
+
+function checkload(){
+    if(loaded){
+        document.getElementById("loaderdialog").classList.remove("loaderdialog");
+        document.getElementById("loaderdialog").classList.add("loaderdialogremove");
+        document.body.classList.remove("small");
+        document.body.classList.add("tempbodyzoom");
+        setTimeout(function(){
+            document.getElementById("loaderdialog").close();
+        },500);
+        return;
+    }else{
+        setTimeout(checkload, 100);
     }
-    document.getElementById("loaderdialog").close();
+}
+
+function loading(){
+    document.body.classList.add("small");
+    document.getElementById("loaderdialog").showModal();
+    checkload();
 }
 loading();
+
 
 
 function dastart(i){
