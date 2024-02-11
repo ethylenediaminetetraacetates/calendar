@@ -1,7 +1,7 @@
 let themearr = ["charcoal.css", "midnight.css", "embers.css", "marble.css", "calcite.css", "tomato.css", "pumpkin.css", "canary.css", "lemon.css", "highlighter.css", "sprout.css", "forest.css"];
 let themeind = 0;
 
-let fontarr = ["rounded.css","sans-serif I.css","sans-serif II.css","sans-serif III.css","serif.css", "monospace.css", "playful.css"]
+let fontarr = ["rounded.css","sans-serif I.css","sans-serif II.css","sans-serif III.css","sans-serif IV.css","serif.css", "monospace.css", "playful.css"]
 let fontind = 0;
 
 let totaldayabbrs = [
