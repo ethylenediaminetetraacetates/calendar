@@ -1,0 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka&display=swap');
+:root, ::backdrop{
+    --font-default: "Fredoka";
+}

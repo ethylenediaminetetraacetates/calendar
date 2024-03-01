@@ -58,7 +58,7 @@ calendar.genmonths = function(){
         if(calendar.month.firstday > i){
             temp += "<div style = \"animation-delay:"+(5*i)+"ms\" class = \"calendargrid-inactive-element\"></div>";
         }else if((calendar.month.firstday+calendar.month.days) > i){
-            if((1+i-calendar.month.firstday) == calendar.currentdate.getDate() && calendar.currentdate.getMonth() == calendar.selecteddate.getMonth()  && calendar.currentdate.getYear() == calendar.selecteddate.getYear()){
+            if((1+i-calendar.month.firstday) == calendar.currentdate.getDate() && calendar.currentdate.getMonth() == calendar.selecteddate.getMonth()  && calendar.currentdate.getFullYear() == calendar.selecteddate.getFullYear()){
                 temp += "<div style = \"animation-delay:"+(5*i)+"ms\" onclick = \"calendar.dayclick("+(1+i-calendar.month.firstday)+");\" class = \"calendargrid-element-today\">"+(1+i-calendar.month.firstday)+"</div>";
             }else{
                 temp += "<div style = \"animation-delay:"+(5*i)+"ms\" onclick = \"calendar.dayclick("+(1+i-calendar.month.firstday)+");\" class = \"calendargrid-element\">"+(1+i-calendar.month.firstday)+"</div>";

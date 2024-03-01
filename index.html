@@ -69,10 +69,10 @@
 
             </div>
         </div>
-        <div class = "maincenterflex">
+        <div class = "maincenterflex" id = "maincenterflex">
 
-            <div class = "fullcalendargrid">
-                <div class = "calendarmonthgrid">
+            <div class = "fullcalendargrid" id = "fullcalendargrid">
+                <div class = "calendarmonthgrid" id = "calendarmonthgrid">
 
                         <button class = "calendarmonthgrid-element" onclick = "calendar.monthshiftdown();">&lt;</button>
 
@@ -84,7 +84,7 @@
                         <button class = "calendarmonthgrid-element" onclick = "calendar.monthshiftup();">&gt;</button>
 
                 </div>
-                <div class = "calendardaygrid">
+                <div class = "calendardaygrid" id = "calendardaygrid">
                     <div class = "calendardaygrid-element">S</div>
                     <div class = "calendardaygrid-element">M</div>
                     <div class = "calendardaygrid-element">T</div>
@@ -109,7 +109,7 @@
 
 
             <div class = "blur-bg-smooth">
-                <dialog class = "dialog dialog-closed" id = "menu">
+                <dialog class = "dialog tl-dialog dialog-closed" id = "menu">
 
                     <div class = "dialog-top">
                         <button class = "button" id = "closemenu" onclick = "closemenu();">close this menu</button>

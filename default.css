@@ -739,6 +739,10 @@ svg{
     animation-direction: normal;
 }
 
+.tl-dialog{
+    backdrop-filter: blur(0.1vmin) opacity(0.8);
+}
+
 .dialog{
     background-color: var(--midground-color-default);
     border-radius: var(--rounding);
