@@ -740,10 +740,12 @@ svg{
 }
 
 .tl-dialog{
-    backdrop-filter: blur(0.1vmin) opacity(0.8);
+    opacity: 0.2;
+    backdrop-filter: blur(0vmin) !important;
 }
 
 .dialog{
+    
     background-color: var(--midground-color-default);
     border-radius: var(--rounding);
     border-style: solid;
@@ -799,37 +801,52 @@ svg{
 
 @keyframes dialog-fadebg{
     0%{
-        opacity: 0;
+        background-color: rgba(var(--background-color-default), 0);
+        backdrop-filter: blur(0vmin);
     }
     100%{
-
+        background-color: rgba(var(--background-color-default), 0.8);
+        backdrop-filter: blur(1vmin);
     }
 }
 
 .dialog::backdrop{
-    background-color: var(--background-color-default);
-
-    opacity:0.8;
+    background-color: rgba(var(--background-color-default), 0.8);
+    backdrop-filter: blur(1vmin);
 
     transition-duration: 500ms;
 
     border-radius: var(--rounding);
+}
 
+.dialog-open::backdrop{
     animation-delay: 0ms;
     animation-play-state: running;
     animation-name: dialog-fadebg;
-    animation-duration: 200ms;
+    animation-duration: 100ms;
     animation-iteration-count: 1;
     animation-direction: normal;
+}
+
+.dialog-closed::backdrop{
+    animation-delay: 0ms;
+    animation-play-state: running;
+    animation-name: dialog-fadebg;
+    animation-duration: 100ms;
+    animation-iteration-count: 1;
+    animation-direction: reverse;
 }
 
 .dialog-top{
     background-color: var(--foreground-color-default);
     border-radius: var(--rounding);
-    height: 6vmin;
 
-    position: fixed;
-    float:right;
+    position:fixed;
+}
+
+.dialog-content{
+    overflow:scroll;
+    height: 80vh;
 }
 
 @keyframes dialog-jumpup{
@@ -992,11 +1009,13 @@ svg{
     height: 5vmin;
     width: 95vmin;
 
+    overflow: hidden;
+
     border-color: var(--text-color-default);
     border-width: 0.1vmin;
     border-style: solid;
 
-    border-radius: 0;
+    border-radius: var(--rounding);
 
     transition-duration: 500ms;
 }
